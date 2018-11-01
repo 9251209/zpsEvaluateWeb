@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,14 +17,11 @@ import cn.net.mine.common.util.ReturnObject;
 import cn.net.mine.user.service.UserService;
 
 /**
-* @program:
-*
-* @description: 用户
-*
-* @author: √   99
-*
-* @create:
-**/
+ * @program:
+ * @description: 用户
+ * @author: √   99
+ * @create:
+ **/
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
@@ -33,10 +31,11 @@ public class UserController {
 
     /**
      * 添加
+     *
      * @param response
      * @param userno
      * @param password
-     * @param phone
+     * @param telphone
      * @param status
      * @param flag
      * @param realname
@@ -49,7 +48,7 @@ public class UserController {
     @RequestMapping(value = "/userAdd")
     @ResponseBody
     public ReturnObject userAdd(HttpServletResponse response, @RequestParam(value = "userno") String userno,
-                                @RequestParam(value = "password") String password, @RequestParam(value = "phone") String phone,
+                                @RequestParam(value = "password") String password, @RequestParam(value = "telphone") String telphone,
                                 @RequestParam(value = "status") String status, @RequestParam(value = "flag") Integer flag,
                                 @RequestParam(value = "realname") String realname, @RequestParam(value = "sex") String sex,
                                 @RequestParam(value = "age") Integer age, @RequestParam(value = "education") String education,
@@ -65,7 +64,7 @@ public class UserController {
             }
             ro.setCode("1");
             ro.setMsg("添加成功！");
-            ro.setData(this.userService.userAdd(userno, password, phone, status, flag, realname, sex, age, education,
+            ro.setData(this.userService.userAdd(userno, password, telphone, status, flag, realname, sex, age, education,
                     position));
             return ro;
         } catch (Exception e) {
@@ -79,11 +78,12 @@ public class UserController {
 
     /**
      * 修改
+     *
      * @param response
      * @param id
      * @param userno
      * @param password
-     * @param phone
+     * @param telphone
      * @param status
      * @param flag
      * @param realname
@@ -97,7 +97,7 @@ public class UserController {
     @ResponseBody
     public ReturnObject userUpdate(HttpServletResponse response, @RequestParam(value = "id") String id,
                                    @RequestParam(value = "userno") String userno, @RequestParam(value = "password") String password,
-                                   @RequestParam(value = "phone") String phone, @RequestParam(value = "status") String status,
+                                   @RequestParam(value = "telphone") String telphone, @RequestParam(value = "status") String status,
                                    @RequestParam(value = "flag") Integer flag, @RequestParam(value = "realname") String realname,
                                    @RequestParam(value = "sex") String sex, @RequestParam(value = "age") Integer age,
                                    @RequestParam(value = "education") String education, @RequestParam(value = "position") String position) {
@@ -111,8 +111,8 @@ public class UserController {
                 return ro;
             }
             ro.setCode("1");
-            ro.setMsg("编辑成功！");
-            ro.setData(this.userService.userUpdate(id, userno, password, phone, status, flag, realname, sex, age,
+            ro.setMsg("修改成功！");
+            ro.setData(this.userService.userUpdate(id, userno, password, telphone, status, flag, realname, sex, age,
                     education, position));
             return ro;
         } catch (Exception e) {
@@ -126,6 +126,7 @@ public class UserController {
 
     /**
      * 删除
+     *
      * @param response
      * @param id
      * @return
@@ -171,12 +172,13 @@ public class UserController {
             if (map.get("status").equals("0")) {
                 ro.setCode("1");
                 ro.setMsg("等待审核！");
-                ro.setData(map);
+                ro.setData(null);
+                return ro;
             }
             // 添加session
             CommonUtils.setCurrentUserInfo(map);
             ro.setCode("1");
-            ro.setMsg("查询成功！");
+            ro.setMsg("登陆成功！");
             ro.setData(map);
             return ro;
         } catch (Exception e) {
@@ -208,6 +210,7 @@ public class UserController {
 
     /**
      * 分页查询
+     *
      * @param response
      * @param pageNo
      * @param pagesize
@@ -269,6 +272,7 @@ public class UserController {
 
     /**
      * 查询单条
+     *
      * @param response
      * @param id
      * @return
@@ -288,4 +292,41 @@ public class UserController {
         return ro;
     }
 
+    /**
+     * 审核
+     * @param response
+     * @param id
+     * @return
+     */
+
+    @RequestMapping(value = "/statusUpdate")
+    @ResponseBody
+    public ReturnObject statusUpdate(HttpServletResponse response, @RequestParam(value = "id") String id) {
+        ReturnObject ro = new ReturnObject();
+        try {
+
+            //获取当前登陆角色权限
+            Map<String,Object> map =CommonUtils.getCurrentUserInfo();
+            if(map!=null){
+                if(map.get("flag").equals("1")){
+                    ro.setCode("1");
+                    ro.setMsg("审核成功！");
+                    ro.setData(this.userService.statusUpdate(id));
+                    return ro;
+                }
+            }
+
+            ro.setCode("1");
+            ro.setMsg("没有权限！");
+            ro.setData(null);
+            return ro;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            ro.setCode("0");
+            ro.setMsg("系统繁忙请稍后再试！！！");
+            ro.setData(null);
+            return ro;
+        }
+    }
 }

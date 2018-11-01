@@ -9,11 +9,11 @@ import cn.net.mine.common.dao.SuperDao;
 public interface UserDao extends SuperDao {
 
     // 添加
-    Object userAdd(String userno, String password, String phone, String status, Integer flag, String realname,
+    Object userAdd(String userno, String password, String telphone, String status, Integer flag, String realname,
                    String sex, Integer age, String education, String position);
 
     // 修改
-    Object userUpdate(String id, String userno, String password, String phone, String status, Integer flag,
+    Object userUpdate(String id, String userno, String password, String telphone, String status, Integer flag,
                       String realname, String sex, Integer age, String education, String position);
 
     // 删除
@@ -35,4 +35,7 @@ public interface UserDao extends SuperDao {
 
     //查询单条
     List<Map<String, Object>> selectUser(String id);
+
+    //审核
+    Object statusUpdate(String id );
 }

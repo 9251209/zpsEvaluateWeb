@@ -16,15 +16,15 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public Object userAdd(String userno, String password, String phone, String status, Integer flag, String realname,
+    public Object userAdd(String userno, String password, String telphone, String status, Integer flag, String realname,
                           String sex, Integer age, String education, String position) {
-        return userDao.userAdd(userno, password, phone, status, flag, realname, sex, age, education, position);
+        return userDao.userAdd(userno, password, telphone, status, flag, realname, sex, age, education, position);
     }
 
     @Override
-    public Object userUpdate(String id, String userno, String password, String phone, String status, Integer flag,
+    public Object userUpdate(String id, String userno, String password, String telphone, String status, Integer flag,
                              String realname, String sex, Integer age, String education, String position) {
-        return userDao.userUpdate(id, userno, password, phone, status, flag, realname, sex, age, education, position);
+        return userDao.userUpdate(id, userno, password, telphone, status, flag, realname, sex, age, education, position);
     }
 
     @Override
@@ -66,4 +66,8 @@ public class UserServiceImpl implements UserService {
         return userDao.selectUser(id);
     }
 
+    @Override
+    public Object statusUpdate(String id) {
+        return this.userDao.statusUpdate(id);
+    }
 }

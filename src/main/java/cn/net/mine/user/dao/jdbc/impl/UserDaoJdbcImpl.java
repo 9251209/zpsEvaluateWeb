@@ -1,5 +1,7 @@
 package cn.net.mine.user.dao.jdbc.impl;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -13,23 +15,28 @@ import cn.net.mine.common.SuperJdbcTemplate;
 public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
 
     @Override
-    public Object userAdd(String userno, String password, String phone, String status, Integer flag, String realname,
+    public Object userAdd(String userno, String password, String telphone, String status, Integer flag, String realname,
                           String sex, Integer age, String education, String position) {
         StringBuffer sql = new StringBuffer();
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // String format = sdf.format(date);
-        sql.append("INSERT INTO USER(userno,password,phone,status,flag )");
+        sql.append("INSERT INTO USER(userno ,password ,telphone ,status ,flag ,realname ,sex ,age ,education ,position)");
         sql.append(" VALUES(");
         sql.append("'").append(userno).append("',");
         sql.append("'").append(password).append("',");
-        sql.append("'").append(phone).append("',");
+        sql.append("'").append(telphone).append("',");
         sql.append("'").append(status).append("',");
         sql.append("'").append(flag).append("',");
 
         sql.append("'").append(realname).append("',");
         sql.append("'").append(sex).append("',");
-        sql.append("'").append(age).append("',");
+        if (age != null && !age.equals("")) {
+            sql.append("'").append(age).append("',");
+        } else {
+            sql.append("'").append("0").append("',");
+        }
+
         sql.append("'").append(education).append("',");
         sql.append("'").append(position).append("'");
         sql.append(")");
@@ -37,7 +44,7 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
     }
 
     @Override
-    public Object userUpdate(String id, String userno, String password, String phone, String status, Integer flag,
+    public Object userUpdate(String id, String userno, String password, String telphone, String status, Integer flag,
                              String realname, String sex, Integer age, String education, String position) {
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
@@ -47,7 +54,7 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
         sql.append("UPDATE USER SET ");
         sql.append(" userno = '").append(userno).append("',");
         sql.append(" password = '").append(password).append("',");
-        sql.append(" phone = '").append(phone).append("',");
+        sql.append(" telphone = '").append(telphone).append("',");
         sql.append(" status = '").append(status).append("',");
         sql.append(" flag = '").append(flag).append("',");
 
@@ -55,7 +62,7 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
         sql.append(" sex = '").append(sex).append("',");
         sql.append(" age = '").append(age).append("',");
         sql.append(" education = '").append(education).append("',");
-        sql.append(" position = '").append(position).append("',");
+        sql.append(" position = '").append(position).append("'");
 
         sql.append(" WHERE ID = '").append(id).append("'");
         return jdbcTemplateCsms.update(sql.toString());
@@ -153,4 +160,19 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
 
     }
 
+
+    @Override
+    public Object statusUpdate(String id) {
+        StringBuffer sql = new StringBuffer();
+        sql.append("UPDATE USER SET ");
+
+        sql.append(" status = '").append("1").append("',");
+
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mmm:ss");
+        sql.append(" statusdate = '").append(sdf.format(new Date())).append("'");
+
+        sql.append(" WHERE ID = '").append(id).append("'");
+
+        return jdbcTemplateCsms.update(sql.toString());
+    }
 }
