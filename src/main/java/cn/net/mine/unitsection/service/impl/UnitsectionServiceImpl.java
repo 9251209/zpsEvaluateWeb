@@ -54,4 +54,10 @@ public class UnitsectionServiceImpl implements UnitsectionService {
     public List<Map<String, Object>> selectUnitsection(String id) {
         return this.unitsectionDao.selectUnitsection(id) ;
     }
+
+
+    @Override
+    public List<Map<String, Object>> selectGetUnitsectionList(String sectionno, String sectionname, String unitno) {
+        return this.unitsectionDao.selectGetUnitsectionList(sectionno, sectionname, unitno);
+    }
 }

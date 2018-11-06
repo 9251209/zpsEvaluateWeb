@@ -1,4 +1,4 @@
-/*package cn.net.mine;
+package cn.net.mine;/*package cn.net.mine;
 
 import java.beans.PropertyVetoException;
 
@@ -41,20 +41,20 @@ public class CsmsDataSourceConfigBak {
 	 * @throws PropertyVetoException 
 	 *//*
 	@Primary
-	@Bean(name = "dataSourceCsms")
-	@ConfigurationProperties(prefix = "spring.dataSourceCsms")
+	@Bean(name = "datasource")
+	@ConfigurationProperties(prefix = "spring.datasource")
 	public DataSource dataSource(Environment environment) throws PropertyVetoException {
-		System.out.println("Environment(spring.dataSourceCsms):"
-				+ environment.getProperty("spring.dataSourceCsms.name"));
+		System.out.println("Environment(spring.datasource):"
+				+ environment.getProperty("spring.datasource.name"));
 		ComboPooledDataSource ds = new ComboPooledDataSource();
         // 设置JDBC的Driver类
-        ds.setDriverClass(environment.getProperty("spring.dataSourceCsms.driverClassName"));  // 参数由 Config 类根据配置文件读取
+        ds.setDriverClass(environment.getProperty("spring.datasource.driverClassName"));  // 参数由 Config 类根据配置文件读取
         // 设置JDBC的URL
-        ds.setJdbcUrl(environment.getProperty("spring.dataSourceCsms.url"));
+        ds.setJdbcUrl(environment.getProperty("spring.datasource.url"));
         // 设置数据库的登录用户名
-        ds.setUser(environment.getProperty("spring.dataSourceCsms.username"));
+        ds.setUser(environment.getProperty("spring.datasource.username"));
         // 设置数据库的登录用户密码
-        ds.setPassword(environment.getProperty("spring.dataSourceCsms.password"));
+        ds.setPassword(environment.getProperty("spring.datasource.password"));
         // 设置连接池的最大连接数
         ds.setMaxPoolSize(1000);
         // 设置连接池的最小连接数
@@ -85,17 +85,17 @@ public class CsmsDataSourceConfigBak {
 	 * @throws PropertyVetoException 
 	 *//*
 	@Bean(name = "ljDataSource")
-	@ConfigurationProperties(prefix = "spring.dataSourceCsms.lj")
+	@ConfigurationProperties(prefix = "spring.datasource.lj")
 	public DataSource dataSourceTwo(Environment environment) throws PropertyVetoException {
 		ComboPooledDataSource ds = new ComboPooledDataSource();
 	    // 设置JDBC的Driver类
-	    ds.setDriverClass(environment.getProperty("spring.dataSourceCsms.lj.driverClassName"));  // 参数由 Config 类根据配置文件读取
+	    ds.setDriverClass(environment.getProperty("spring.datasource.lj.driverClassName"));  // 参数由 Config 类根据配置文件读取
 	    // 设置JDBC的URL
-	    ds.setJdbcUrl(environment.getProperty("spring.dataSourceCsms.lj.url"));
+	    ds.setJdbcUrl(environment.getProperty("spring.datasource.lj.url"));
 	    // 设置数据库的登录用户名
-	    ds.setUser(environment.getProperty("spring.dataSourceCsms.lj.username"));
+	    ds.setUser(environment.getProperty("spring.datasource.lj.username"));
 	    // 设置数据库的登录用户密码
-	    ds.setPassword(environment.getProperty("spring.dataSourceCsms.lj.password"));
+	    ds.setPassword(environment.getProperty("spring.datasource.lj.password"));
 	    // 设置连接池的最大连接数
 	    ds.setMaxPoolSize(25);
 	    // 设置连接池的最小连接数
@@ -143,7 +143,7 @@ public class CsmsDataSourceConfigBak {
 	 *//*
 	@Bean(name = "entityManagerFactoryCsms")
 	public EntityManagerFactory entityManagerFactory(
-			@Qualifier("dataSourceCsms") DataSource dataSource,
+			@Qualifier("datasource") DataSource dataSource,
 			@Qualifier("jpaVendorAdapterCsms") JpaVendorAdapter jpaVendorAdapter) {
 		LocalContainerEntityManagerFactoryBean lef = new LocalContainerEntityManagerFactoryBean();
 		lef.setDataSource(dataSource);
@@ -189,7 +189,7 @@ public class CsmsDataSourceConfigBak {
 	 *//*
 	@Bean(name = "jdbcTemplateCsms")
 	public JdbcTemplate jdbcTemplate(
-			@Qualifier("dataSourceCsms") DataSource dataSource) {
+			@Qualifier("datasource") DataSource dataSource) {
 		return new JdbcTemplate(dataSource);
 	}
 	

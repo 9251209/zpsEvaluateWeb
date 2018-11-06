@@ -52,17 +52,28 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
 
         StringBuffer sql = new StringBuffer();
         sql.append("UPDATE USER SET ");
-        sql.append(" userno = '").append(userno).append("',");
-        sql.append(" password = '").append(password).append("',");
-        sql.append(" telphone = '").append(telphone).append("',");
-        sql.append(" status = '").append(status).append("',");
-        sql.append(" flag = '").append(flag).append("',");
+        if (userno != null && !userno.equals(""))
+            sql.append(" userno = '").append(userno).append("',");
+        if (password != null && !password.equals(""))
+            sql.append(" password = '").append(password).append("',");
+        if (telphone != null && !telphone.equals(""))
+            sql.append(" telphone = '").append(telphone).append("',");
+        if (status != null && !status.equals(""))
+            sql.append(" status = '").append(status).append("',");
+        if (flag != null && !flag.equals(""))
+            sql.append(" flag = '").append(flag).append("',");
+        if (realname != null && !realname.equals(""))
+            sql.append(" realname = '").append(realname).append("',");
+        if (sex != null && !sex.equals(""))
+            sql.append(" sex = '").append(sex).append("',");
+        if (age != null && !age.equals(""))
+            sql.append(" age = '").append(age).append("',");
+        if (education != null && !education.equals(""))
+            sql.append(" education = '").append(education).append("',");
+        if (position != null && !position.equals(""))
+            sql.append(" position = '").append(position).append("',");
 
-        sql.append(" realname = '").append(realname).append("',");
-        sql.append(" sex = '").append(sex).append("',");
-        sql.append(" age = '").append(age).append("',");
-        sql.append(" education = '").append(education).append("',");
-        sql.append(" position = '").append(position).append("'");
+        sql.append(" id = '").append(id).append("'");
 
         sql.append(" WHERE ID = '").append(id).append("'");
         return jdbcTemplateCsms.update(sql.toString());
@@ -168,7 +179,7 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
 
         sql.append(" status = '").append("1").append("',");
 
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mmm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mmm:ss");
         sql.append(" statusdate = '").append(sdf.format(new Date())).append("'");
 
         sql.append(" WHERE ID = '").append(id).append("'");

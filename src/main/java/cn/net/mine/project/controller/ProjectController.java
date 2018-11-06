@@ -1,5 +1,6 @@
 package cn.net.mine.project.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -15,14 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import cn.net.mine.common.util.ReturnObject;
 
 /**
-* @program:
-*
-* @description:
-*
-* @author: √   99
-*
-* @create:
-**/
+ * @program:
+ * @description:
+ * @author: √   99
+ * @create:
+ **/
 
 @Controller
 @RequestMapping(value = "/project")
@@ -33,6 +31,7 @@ public class ProjectController {
 
     /**
      * 添加
+     *
      * @param response
      * @param prono
      * @param proname
@@ -64,6 +63,19 @@ public class ProjectController {
                 ro.setData(null);
                 return ro;
             }
+            if (totalInvestmentAmount != null && !totalInvestmentAmount.equals("")) {
+
+            } else {
+                totalInvestmentAmount = "0";
+            }
+
+            if (coveredArea != null && !coveredArea.equals("")) {
+
+            } else {
+                coveredArea = "0";
+            }
+
+
             ro.setCode("1");
             ro.setMsg("添加成功！");
             ro.setData(this.projectService.projectAdd(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany));
@@ -79,6 +91,7 @@ public class ProjectController {
 
     /**
      * 修改
+     *
      * @param response
      * @param id
      * @param prono
@@ -107,7 +120,7 @@ public class ProjectController {
             int i = projectService.findBtName(prono, id);
             if (i > 0) {
                 ro.setCode("0");
-                ro.setMsg("用户名已存在请重新编辑！！！");
+                ro.setMsg("项目编号已存在请重新编辑！！！");
                 ro.setData(null);
                 return ro;
             }
@@ -126,6 +139,7 @@ public class ProjectController {
 
     /**
      * 删除
+     *
      * @param response
      * @param id
      * @return
@@ -152,6 +166,7 @@ public class ProjectController {
 
     /**
      * 分页查询
+     *
      * @param response
      * @param pageNo
      * @param pagesize
@@ -195,8 +210,10 @@ public class ProjectController {
         return ro;
     }
 
+
     /**
      * 分页查询总页数
+     *
      * @param response
      * @param pagesize
      * @param prono
@@ -228,8 +245,9 @@ public class ProjectController {
             pagesize = 1;
         }
 
-        Integer count = projectService.count(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany);
-        Integer b = (int) Math.ceil(count / pagesize);
+        double count = new BigDecimal(projectService.count(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany)).divide(new BigDecimal(1)).doubleValue();
+
+        int b = (int) Math.ceil(count / pagesize);
         ro.setCode("1");
         ro.setMsg("查询总页数！");
         ro.setData(b);
@@ -239,6 +257,7 @@ public class ProjectController {
 
     /**
      * 查询单条
+     *
      * @param response
      * @param id
      * @return
@@ -257,5 +276,69 @@ public class ProjectController {
         ro.setData(map);
         return ro;
     }
+
+
+    /**
+     * 不分页查询
+     *
+     * @param response
+     * @param prono
+     * @param proname
+     * @param type
+     * @param userno
+     * @param totalInvestmentAmount
+     * @param coveredArea
+     * @param purpose
+     * @param brief
+     * @param leader
+     * @param address
+     * @param consCompany
+     * @param buildCompany
+     * @param superCompany
+     * @param designCompany
+     * @param prospectCompany
+     * @return
+     */
+    @RequestMapping(value = "/selectGetProjectList")
+    @ResponseBody
+    public ReturnObject selectGetProjectList(HttpServletResponse response,
+                                             String prono, String proname, String type, String userno, String totalInvestmentAmount,
+                                             String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
+
+        ReturnObject ro = new ReturnObject();
+
+
+        List<Map<String, Object>> list = projectService.selectGetProjectList(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany);
+
+        ro.setCode("1");
+        ro.setMsg("查询成功！");
+        ro.setData(list);
+        return ro;
+    }
+
+
+    /**
+     * 根据用户 查询所有
+     *
+     * @param response
+     * @param userno
+     * @return
+     */
+    @RequestMapping(value = "/GetProjectList")
+    @ResponseBody
+    public ReturnObject GetProjectList(HttpServletResponse response,
+                                       String userno) {
+
+        ReturnObject ro = new ReturnObject();
+
+
+        List<Map<String, Object>> list = projectService.GetProjectList(userno);
+
+        ro.setCode("1");
+        ro.setMsg("查询成功！");
+        ro.setData(list);
+        return ro;
+    }
+
 
 }

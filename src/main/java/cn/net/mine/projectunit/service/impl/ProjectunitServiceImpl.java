@@ -66,4 +66,9 @@ public class ProjectunitServiceImpl implements ProjectunitService {
         return projectunitDao.selectProjectunit(id);
     }
 
+    @Override
+    public List<Map<String, Object>> selectGetProjectunitList(String unitno, String unitname, String prono) {
+        return this.projectunitDao.selectGetProjectunitList(unitno, unitname, prono);
+    }
+
 }

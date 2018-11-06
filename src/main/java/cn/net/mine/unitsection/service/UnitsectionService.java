@@ -29,4 +29,8 @@ public interface UnitsectionService extends SuperService {
 
     //查询单条
     List<Map<String, Object>> selectUnitsection(String id);
+
+
+    //列表
+    List<Map<String, Object>> selectGetUnitsectionList( String sectionno, String sectionname ,String unitno);
 }

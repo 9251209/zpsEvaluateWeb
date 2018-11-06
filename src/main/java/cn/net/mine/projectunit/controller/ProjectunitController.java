@@ -1,5 +1,6 @@
 package cn.net.mine.projectunit.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -31,6 +32,7 @@ public class ProjectunitController {
 
     /**
      * 添加
+     *
      * @param response
      * @param unitno
      * @param unitname
@@ -70,6 +72,7 @@ public class ProjectunitController {
 
     /**
      * 修改
+     *
      * @param response
      * @param id
      * @param unitno
@@ -79,9 +82,9 @@ public class ProjectunitController {
      */
     @RequestMapping(value = "/projectunitUpdate")
     @ResponseBody
-    public ReturnObject projectunitUpdate(HttpServletResponse response, @RequestParam(value = "id") String id, @RequestParam(value = "unitno") String unitno,
-                                          @RequestParam(value = "unitname") String unitname,
-                                          @RequestParam(value = "prono") String prono) {
+    public ReturnObject projectunitUpdate(HttpServletResponse response, @RequestParam(value = "id") String id, String unitno,
+                                          String unitname,
+                                          String prono) {
         ReturnObject ro = new ReturnObject();
         try {
             int i = projectunitService.findBtName(unitno, id);
@@ -106,6 +109,7 @@ public class ProjectunitController {
 
     /**
      * 删除
+     *
      * @param response
      * @param id
      * @return
@@ -132,6 +136,7 @@ public class ProjectunitController {
 
     /**
      * 分页查询
+     *
      * @param response
      * @param pageNo
      * @param pagesize
@@ -186,7 +191,7 @@ public class ProjectunitController {
             pagesize = 1;
         }
 
-        Integer count = projectunitService.count(unitno, unitname, prono);
+        double count = new BigDecimal(projectunitService.count(unitno, unitname, prono)).divide(new BigDecimal(1)).doubleValue();
         Integer b = (int) Math.ceil(count / pagesize);
         ro.setCode("1");
         ro.setMsg("查询总页数！");
@@ -197,6 +202,7 @@ public class ProjectunitController {
 
     /**
      * 查询单条
+     *
      * @param response
      * @param id
      * @return
@@ -216,4 +222,28 @@ public class ProjectunitController {
         return ro;
     }
 
+    /**
+     * @param response
+     * @param unitno
+     * @param unitname
+     * @param prono
+     * @return
+     */
+    @RequestMapping(value = "/selectGetProjectunitList")
+    @ResponseBody
+    public ReturnObject selectGetProjectunitList(HttpServletResponse response, String unitno,
+                                                 String unitname,
+                                                 String prono
+    ) {
+
+        ReturnObject ro = new ReturnObject();
+
+
+        List<Map<String, Object>> list = projectunitService.selectGetProjectunitList(unitno, unitname, prono);
+
+        ro.setCode("1");
+        ro.setMsg("查询成功！");
+        ro.setData(list);
+        return ro;
+    }
 }

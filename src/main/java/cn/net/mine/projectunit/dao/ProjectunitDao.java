@@ -32,4 +32,8 @@ public interface ProjectunitDao extends SuperDao {
     //查询单条
     List<Map<String, Object>> selectProjectunit(String id);
 
+
+    // 列表
+    List<Map<String, Object>> selectGetProjectunitList(String unitno, String unitname,String prono);
+
 }

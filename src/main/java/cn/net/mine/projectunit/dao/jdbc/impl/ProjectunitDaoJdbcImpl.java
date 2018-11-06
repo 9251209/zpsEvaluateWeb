@@ -36,11 +36,14 @@ public class ProjectunitDaoJdbcImpl extends SuperJdbcTemplate implements Project
 
         StringBuffer sql = new StringBuffer();
         sql.append("UPDATE projectunit SET ");
-        sql.append(" unitno = '").append(unitno).append("',");
-        sql.append(" unitname = '").append(unitname).append("',");
-        sql.append(" prono = '").append(prono).append("'");
+        if (unitno != null && !unitno.equals(""))
+            sql.append(" unitno = '").append(unitno).append("',");
+        if (unitname != null && !unitname.equals(""))
+            sql.append(" unitname = '").append(unitname).append("',");
+        if (prono != null && !prono.equals(""))
+            sql.append(" prono = '").append(prono).append("',");
 
-
+        sql.append(" id = '").append(id).append("',");
         sql.append(" WHERE ID = '").append(id).append("'");
         return jdbcTemplateCsms.update(sql.toString());
     }
@@ -128,6 +131,26 @@ public class ProjectunitDaoJdbcImpl extends SuperJdbcTemplate implements Project
 
         return jdbcTemplateCsms.queryForList(sql.toString());
 
+    }
+
+
+    @Override
+    public List<Map<String, Object>> selectGetProjectunitList(String unitno, String unitname, String prono) {
+
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT * from projectunit u where 1=1 ");
+        if (unitno != null && !unitno.equals("")) {
+            sql.append(" and u.unitno = '").append(unitno).append("'");
+        }
+        if (unitname != null && !unitname.equals("")) {
+            sql.append(" AND u.unitname = '").append(unitname).append("'");
+        }
+
+        if (prono != null && !prono.equals("")) {
+            sql.append(" AND u.prono = '").append(prono).append("'");
+        }
+
+        return jdbcTemplateCsms.queryForList(sql.toString());
     }
 
 

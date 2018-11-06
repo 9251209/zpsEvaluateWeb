@@ -33,4 +33,10 @@ public interface ProjectService extends SuperService {
 
     //查询单条
     List<Map<String, Object>> selectProject(String id);
+
+
+    //不分页列表
+     List<Map<String, Object>> selectGetProjectList( String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany);
+
+    List<Map<String, Object>> GetProjectList( String userno);
 }

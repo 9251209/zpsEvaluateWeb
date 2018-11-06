@@ -1,16 +1,15 @@
 package cn.net.mine.user.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import cn.net.mine.common.util.CommonUtils;
 import cn.net.mine.common.util.ReturnObject;
@@ -22,6 +21,8 @@ import cn.net.mine.user.service.UserService;
  * @author: √   99
  * @create:
  **/
+@Component
+@CrossOrigin
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
@@ -95,12 +96,12 @@ public class UserController {
      */
     @RequestMapping(value = "/userUpdate")
     @ResponseBody
-    public ReturnObject userUpdate(HttpServletResponse response, @RequestParam(value = "id") String id,
-                                   @RequestParam(value = "userno") String userno, @RequestParam(value = "password") String password,
-                                   @RequestParam(value = "telphone") String telphone, @RequestParam(value = "status") String status,
-                                   @RequestParam(value = "flag") Integer flag, @RequestParam(value = "realname") String realname,
-                                   @RequestParam(value = "sex") String sex, @RequestParam(value = "age") Integer age,
-                                   @RequestParam(value = "education") String education, @RequestParam(value = "position") String position) {
+    public ReturnObject userUpdate(HttpServletResponse response, String id,
+                                   String userno, String password,
+                                   String telphone, String status,
+                                   Integer flag, String realname,
+                                   String sex, Integer age,
+                                   String education, String position) {
         ReturnObject ro = new ReturnObject();
         try {
             int i = userService.findBtName(userno, id);
@@ -155,7 +156,7 @@ public class UserController {
      *
      * @return ReturnObject
      */
-    @RequestMapping(value = "/login")
+    @PostMapping(value = "/login")
     @ResponseBody
     public ReturnObject login(HttpServletResponse response, @RequestParam(value = "userName") String userName,
                               @RequestParam(value = "passWord") String passWord) {
@@ -177,6 +178,7 @@ public class UserController {
             }
             // 添加session
             CommonUtils.setCurrentUserInfo(map);
+            Map<String, Object> maps = CommonUtils.getCurrentUserInfo();
             ro.setCode("1");
             ro.setMsg("登陆成功！");
             ro.setData(map);
@@ -261,7 +263,7 @@ public class UserController {
             pagesize = 1;
         }
 
-        Integer count = userService.count(userno, status);
+        double count = new BigDecimal(userService.count(userno, status)).divide(new BigDecimal(1)).doubleValue();
         Integer b = (int) Math.ceil(count / pagesize);
         ro.setCode("1");
         ro.setMsg("查询总页数！");
@@ -294,33 +296,21 @@ public class UserController {
 
     /**
      * 审核
+     *
      * @param response
      * @param id
      * @return
      */
 
-    @RequestMapping(value = "/statusUpdate")
+    @PostMapping(value = "/statusUpdate")
     @ResponseBody
     public ReturnObject statusUpdate(HttpServletResponse response, @RequestParam(value = "id") String id) {
         ReturnObject ro = new ReturnObject();
         try {
-
-            //获取当前登陆角色权限
-            Map<String,Object> map =CommonUtils.getCurrentUserInfo();
-            if(map!=null){
-                if(map.get("flag").equals("1")){
-                    ro.setCode("1");
-                    ro.setMsg("审核成功！");
-                    ro.setData(this.userService.statusUpdate(id));
-                    return ro;
-                }
-            }
-
             ro.setCode("1");
-            ro.setMsg("没有权限！");
-            ro.setData(null);
+            ro.setMsg("审核成功！");
+            ro.setData(this.userService.statusUpdate(id));
             return ro;
-
         } catch (Exception e) {
             e.printStackTrace();
             ro.setCode("0");

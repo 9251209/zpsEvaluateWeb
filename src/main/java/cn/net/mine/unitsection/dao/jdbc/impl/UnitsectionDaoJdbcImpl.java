@@ -29,18 +29,21 @@ public class UnitsectionDaoJdbcImpl extends SuperJdbcTemplate implements Unitsec
     }
 
     @Override
-    public Object unitsectionUpdate(String id,String sectionno, String sectionname, String unitno) {
+    public Object unitsectionUpdate(String id, String sectionno, String sectionname, String unitno) {
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
         // String format = sdf.format(date);
 
         StringBuffer sql = new StringBuffer();
         sql.append("UPDATE unitsection SET ");
-        sql.append(" sectionno = '").append(sectionno).append("',");
-        sql.append(" sectionname = '").append(sectionname).append("',");
-        sql.append(" unitno = '").append(unitno).append("'");
+        if (sectionno != null && !sectionno.equals(""))
+            sql.append(" sectionno = '").append(sectionno).append("',");
+        if (sectionname != null && !sectionname.equals(""))
+            sql.append(" sectionname = '").append(sectionname).append("',");
+        if (unitno != null && !unitno.equals(""))
+            sql.append(" unitno = '").append(unitno).append("',");
 
-
+        sql.append(" id = '").append(id).append("'");
         sql.append(" WHERE ID = '").append(id).append("'");
         return jdbcTemplateCsms.update(sql.toString());
     }
@@ -55,7 +58,7 @@ public class UnitsectionDaoJdbcImpl extends SuperJdbcTemplate implements Unitsec
     @Override
     public int findBtName(String sectionno) {
         StringBuffer sql = new StringBuffer();
-        sql.append("select count(id) from unitsection where unitsectionno ='");
+        sql.append("select count(id) from unitsection where sectionno ='");
         sql.append(sectionno).append("'");
         List<Integer> list = jdbcTemplateCsms.queryForList(sql.toString(), Integer.class);
         if (CollectionUtils.isNotEmpty(list)) {
@@ -67,7 +70,7 @@ public class UnitsectionDaoJdbcImpl extends SuperJdbcTemplate implements Unitsec
     @Override
     public int findBtName(String sectionno, String id) {
         StringBuffer sql = new StringBuffer();
-        sql.append("select count(id) from unitsection where unitsectionno ='");
+        sql.append("select count(id) from unitsection where sectionno ='");
         sql.append(sectionno).append("' AND id !='").append(id).append("'");
         List<Integer> list = jdbcTemplateCsms.queryForList(sql.toString(), Integer.class);
         if (CollectionUtils.isNotEmpty(list)) {
@@ -75,7 +78,6 @@ public class UnitsectionDaoJdbcImpl extends SuperJdbcTemplate implements Unitsec
         }
         return 0;
     }
-
 
 
     @Override
@@ -92,7 +94,6 @@ public class UnitsectionDaoJdbcImpl extends SuperJdbcTemplate implements Unitsec
         if (unitno != null && !unitno.equals("")) {
             sql.append(" AND u.unitno LIKE '%").append(unitno).append("%'");
         }
-
 
 
         sql.append(" limit " + (pageNo - 1) * pagesize + " , " + pagesize + " ");
@@ -134,4 +135,21 @@ public class UnitsectionDaoJdbcImpl extends SuperJdbcTemplate implements Unitsec
 
     }
 
+    @Override
+    public List<Map<String, Object>> selectGetUnitsectionList(String sectionno, String sectionname, String unitno) {
+        // TODO Auto-generated method stub
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT * from unitsection u where 1=1 ");
+        if (sectionno != null && !sectionno.equals("")) {
+            sql.append(" and u.sectionno LIKE '%").append(sectionno).append("%'");
+        }
+        if (sectionname != null && !sectionname.equals("")) {
+            sql.append(" AND u.sectionname LIKE '%").append(sectionname).append("%'");
+        }
+        if (unitno != null && !unitno.equals("")) {
+            sql.append(" AND u.unitno = '").append(unitno).append("'");
+        }
+
+        return jdbcTemplateCsms.queryForList(sql.toString());
+    }
 }
