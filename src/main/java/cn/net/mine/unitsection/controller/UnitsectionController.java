@@ -30,9 +30,12 @@ public class UnitsectionController {
     private UnitsectionService unitsectionService;
 
     /**
-     * 用户添加
-     *
-     * @return √ 99 ,method = RequestMethod.POST
+     *  添加
+     * @param response
+     * @param sectionno 阶段编号
+     * @param sectionname   阶段名称
+     * @param unitno    所属单体
+     * @return
      */
     @RequestMapping(value = "/unitsectionAdd")
     @ResponseBody
@@ -62,9 +65,13 @@ public class UnitsectionController {
     }
 
     /**
-     * 用户编辑
-     *
-     * @return √ 99 ,method = RequestMethod.POST
+     * 修改i
+     * @param response
+     * @param id
+     * @param sectionno 阶段编号
+     * @param sectionname   阶段名称
+     * @param unitno    所属单体
+     * @return
      */
     @RequestMapping(value = "/unitsectionUpdate")
     @ResponseBody
@@ -118,10 +125,16 @@ public class UnitsectionController {
     }
 
 
+
     /**
      * 分页查询
-     *
-     * @return ReturnObject
+     * @param response
+     * @param pageNo
+     * @param pagesize
+     * @param sectionno
+     * @param sectionname
+     * @param unitno
+     * @return
      */
     @RequestMapping(value = "/selectUnitsectionList")
     @ResponseBody

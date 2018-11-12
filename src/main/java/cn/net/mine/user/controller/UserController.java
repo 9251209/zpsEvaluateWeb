@@ -34,16 +34,16 @@ public class UserController {
      * 添加
      *
      * @param response
-     * @param userno
-     * @param password
-     * @param telphone
-     * @param status
-     * @param flag
-     * @param realname
-     * @param sex
-     * @param age
-     * @param education
-     * @param position
+     * @param userno    用户名
+     * @param password  密码
+     * @param telphone  电话
+     * @param status    状态0未审核1通过
+     * @param flag  区分管理员1、普通用户0
+     * @param realname  真实姓名
+     * @param sex   性别
+     * @param age   年龄
+     * @param education 教育程度
+     * @param position  职务
      * @return
      */
     @RequestMapping(value = "/userAdd")
@@ -82,16 +82,16 @@ public class UserController {
      *
      * @param response
      * @param id
-     * @param userno
-     * @param password
-     * @param telphone
-     * @param status
-     * @param flag
-     * @param realname
-     * @param sex
-     * @param age
-     * @param education
-     * @param position
+     * @param userno    用户名
+     * @param password  密码
+     * @param telphone  电话
+     * @param status    状态0未审核1通过
+     * @param flag  区分管理员1、普通用户0
+     * @param realname  真实姓名
+     * @param sex   性别
+     * @param age   年龄
+     * @param education 教育程度
+     * @param position  职务
      * @return
      */
     @RequestMapping(value = "/userUpdate")

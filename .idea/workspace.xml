@@ -149,47 +149,50 @@
     <session id="-542370383">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.34" value="2" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="38" />
-          <entry key="java" value="236" />
+          <entry key="class" value="54" />
+          <entry key="java" value="348" />
           <entry key="properties" value="1" />
           <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="38" />
-          <entry key="JAVA" value="236" />
+          <entry key="CLASS" value="54" />
+          <entry key="JAVA" value="348" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="7" />
-          <entry key="java" value="2409" />
+          <entry key="dummy" value="30" />
+          <entry key="java" value="4433" />
           <entry key="xml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2409" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="JAVA" value="4433" />
+          <entry key="PLAIN_TEXT" value="30" />
           <entry key="XML" value="42" />
         </counts>
       </usages-collector>
@@ -199,7 +202,20 @@
     <favorites_list name="zpsEvaluateWeb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/controller/ScoresumController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="192" column="43" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -215,6 +231,13 @@
       <find>minu</find>
       <find>jpaVendorAdapterCsms</find>
       <find>persistenceUnitCsms</find>
+      <find>scorezone</find>
+      <find>ObjectAndGetAutoIncreaseId</find>
+      <find>KeyHolder</find>
+      <find>query</find>
+      <find>Project</find>
+      <find>project</find>
+      <find>,String scorename</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -224,6 +247,15 @@
       <replace>telphone</replace>
       <replace>datasource</replace>
       <replace>mine</replace>
+      <replace>Scorebase</replace>
+      <replace>Scorezone</replace>
+      <replace>scoreformula</replace>
+      <replace>Scoreformula</replace>
+      <replace>score</replace>
+      <replace>Score</replace>
+      <replace>Scoresum</replace>
+      <replace />
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -232,21 +264,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/jdbc/impl/ProjectunitDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/dao/jdbc/impl/ProjectunitDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/controller/ProjectunitController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/ProjectunitDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/controller/ProjectunitController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/jdbc/impl/UserDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/dao/jdbc/impl/UserDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/user/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/user/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/user/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/common/dao/SuperDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/common/service/SuperService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/WebXml.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/common/SuperJdbcTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/CommonUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/CsmsDataSourceConfig.java" />
@@ -259,14 +276,45 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/service/ProjectService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/service/impl/ProjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/user/dao/jdbc/impl/UserDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/user/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/controller/ProjectunitController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/controller/UnitsectionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/dao/jdbc/impl/ProjectunitDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/dao/jdbc/impl/UnitsectionDaoJdbcImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/jdbc/impl/ProjectDaoJdbcImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/service/impl/ProjectunitServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/dao/jdbc/impl/ProjectDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/dao/ScorebaseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/service/ScorebaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/service/impl/ScorebaseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/dao/jdbc/impl/ProjectDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/controller/UnitsectionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/project/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/controller/ProjectunitController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/common/SuperJdbcTemplate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/controller/ScorebaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/controller/ScorezoneController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/service/ScorezoneService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/service/impl/ScorezoneServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/dao/ScorezoneDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/dao/jdbc/impl/ScorezoneDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/dao/jdbc/impl/ScorebaseDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/dao/jdbc/impl/ProjectDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/dao/ScoreformulaDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/dao/jdbc/impl/ScoreformulaDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/service/ScoreformulaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/service/impl/ScoreformulaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/controller/ScoreformulaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/score/dao/jdbc/impl/ProjectDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/dao/jdbc/impl/ProjectDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/score/service/impl/ScoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/score/service/ScoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/score/controller/ScoreController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/score/dao/ScoreDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/score/dao/jdbc/impl/ScoreDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/dao/ScoresumDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/service/ScoresumService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/service/impl/ScoresumServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/dao/jdbc/impl/ScoresumDaoJdbcImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/controller/ScoresumController.java" />
       </list>
     </option>
   </component>
@@ -290,9 +338,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="57" />
-    <option name="y" value="7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="205" />
+    <option name="y" value="25" />
     <option name="width" value="1750" />
     <option name="height" value="960" />
   </component>
@@ -367,7 +415,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -408,7 +455,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mine" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="scoresum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zpsEvaluateWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -417,16 +464,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mine" type="462c0819:PsiDirectoryNode" />
-              <item name="projectunit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zpsEvaluateWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zpsEvaluateWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mine" type="462c0819:PsiDirectoryNode" />
-              <item name="projectunit" type="462c0819:PsiDirectoryNode" />
+              <item name="scoresum" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -436,7 +474,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mine" type="462c0819:PsiDirectoryNode" />
-              <item name="unitsection" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zpsEvaluateWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -445,24 +483,46 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mine" type="462c0819:PsiDirectoryNode" />
-              <item name="unitsection" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zpsEvaluateWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zpsEvaluateWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mine" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zpsEvaluateWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zpsEvaluateWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mine" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541400463425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542012799241" />
     <property name="last_opened_file_path" value="D:/zpsEvaluateWeb" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -694,7 +754,7 @@
     </list>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\9251209\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -715,12 +775,18 @@
       <workItem from="1541118633152" duration="4082000" />
       <workItem from="1541122760647" duration="15267000" />
       <workItem from="1541378675835" duration="6625000" />
-      <workItem from="1541464877723" duration="323000" />
+      <workItem from="1541464877723" duration="11504000" />
+      <workItem from="1541551705857" duration="13657000" />
+      <workItem from="1541637718950" duration="11372000" />
+      <workItem from="1541724423189" duration="10927000" />
+      <workItem from="1541982894419" duration="3802000" />
+      <workItem from="1541998805914" duration="5099000" />
+      <workItem from="1542012735347" duration="83000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65153000" />
+    <option name="totallyTimeSpent" value="121274000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -733,9 +799,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49889135" visible="true" weight="0.22319035" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49889135" visible="true" weight="0.1735925" />
       <window_info id="Structure" order="1" sideWeight="0.50110865" side_tool="true" weight="0.18230563" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -745,10 +811,10 @@
       <window_info id="Web" order="7" sideWeight="0.50110865" side_tool="true" weight="0.18230563" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.66219836" weight="0.3899371" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6588472" weight="0.3838527" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="5" sideWeight="0.49776453" visible="true" weight="0.32577905" />
+      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49776453" weight="0.32577905" />
       <window_info anchor="bottom" id="Spring" order="6" sideWeight="0.49850968" weight="0.32704404" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49850968" weight="0.32704404" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32704404" />
@@ -757,7 +823,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49850968" weight="0.32704404" />
-      <window_info anchor="bottom" x="22" y="352" width="1492" height="279" id="Debug" order="14" sideWeight="0.3378016" side_tool="true" weight="0.41926345" />
+      <window_info anchor="bottom" x="22" y="352" width="1492" height="279" id="Debug" order="14" sideWeight="0.34115282" side_tool="true" weight="0.3838527" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -769,41 +835,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49889135" visible="true" weight="0.21983914" />
-      <window_info id="Structure" order="1" sideWeight="0.50110865" side_tool="true" weight="0.18230563" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.50110865" side_tool="true" weight="0.18230563" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.50110865" side_tool="true" weight="0.18230563" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.66219836" visible="true" weight="0.3512748" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49776453" weight="0.32704404" />
-      <window_info anchor="bottom" id="Spring" order="6" sideWeight="0.49850968" weight="0.32704404" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49850968" weight="0.32704404" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32704404" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.4953083" weight="0.32577905" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49850968" weight="0.32704404" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49850968" weight="0.32704404" />
-      <window_info anchor="bottom" x="22" y="352" width="1492" height="279" id="Debug" order="14" sideWeight="0.3378016" side_tool="true" weight="0.41926345" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -816,312 +847,19 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class</url>
+          <line>611</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/org/apache/tomcat/util/modeler/BaseModelMBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="286" selection-start-line="286" selection-end-line="286" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/EntityManagerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/context/request/RequestAttributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.2.17.Final/hibernate-core-5.2.17.Final-sources.jar!/org/hibernate/engine/jdbc/internal/JdbcServicesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/SessionBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/ReturnObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/PageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/Jurisdiction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/util/CheckPara.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1066">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.6.RELEASE/spring-context-5.0.6.RELEASE.jar!/org/springframework/stereotype/Component.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/CrossDomainConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/bind/annotation/CrossOrigin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1007">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.0.6.RELEASE/spring-orm-5.0.6.RELEASE.jar!/org/springframework/orm/jpa/AbstractEntityManagerFactoryBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="142" column="16" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.0.6.RELEASE/spring-orm-5.0.6.RELEASE.jar!/org/springframework/orm/jpa/JpaVendorAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/PermissionVerification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/CsmsDataSourceConfigBak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <folding>
-            <element signature="e#0#6790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/WebXml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/login/log/dao/jdbc/impl/LoginLogDaoJdbcImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/SuperJdbcTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1007">
-          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="37" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/CsmsDataSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/login/log/controller/LoginLogController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/service/ProjectunitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="35" lean-forward="true" selection-start-line="32" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/dao/ProjectunitDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/support/AbstractFallbackSQLExceptionTranslator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/support/SQLErrorCodeSQLExceptionTranslator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/service/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/ProjectDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/service/impl/ProjectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/dao/UnitsectionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/jdbc/impl/ProjectDaoJdbcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="142" column="53" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="311" column="45" lean-forward="true" selection-start-line="311" selection-start-column="45" selection-end-line="311" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/dao/jdbc/impl/UserDaoJdbcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="73" column="70" selection-start-line="73" selection-start-column="70" selection-end-line="73" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/controller/ProjectunitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4294">
-          <caret line="241" column="73" selection-start-line="241" selection-start-column="73" selection-end-line="241" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/service/impl/ProjectunitServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1178">
@@ -1129,24 +867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/controller/UnitsectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3762">
-          <caret line="211" column="72" selection-start-line="211" selection-start-column="72" selection-end-line="211" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/service/impl/UnitsectionServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
           <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-          <folding>
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,16 +888,464 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-645">
+          <caret line="283" column="24" selection-start-line="283" selection-start-column="24" selection-end-line="283" selection-end-column="24" />
+          <caret line="284" column="24" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="24" />
+          <caret line="285" column="28" selection-start-line="285" selection-start-column="28" selection-end-line="285" selection-end-column="28" />
+          <caret line="286" column="24" selection-start-line="286" selection-start-column="24" selection-end-line="286" selection-end-column="24" />
+          <caret line="287" column="28" selection-start-line="287" selection-start-column="28" selection-end-line="287" selection-end-column="28" />
+          <caret line="288" column="40" selection-start-line="288" selection-start-column="40" selection-end-line="288" selection-end-column="40" />
+          <caret line="289" column="32" selection-start-line="289" selection-start-column="32" selection-end-line="289" selection-end-column="32" />
+          <caret line="290" column="28" selection-start-line="290" selection-start-column="28" selection-end-line="290" selection-end-column="28" />
+          <caret line="291" column="24" selection-start-line="291" selection-start-column="24" selection-end-line="291" selection-end-column="24" />
+          <caret line="292" column="29" selection-start-line="292" selection-start-column="29" selection-end-line="292" selection-end-column="29" />
+          <caret line="293" column="26" selection-start-line="293" selection-start-column="26" selection-end-line="293" selection-end-column="26" />
+          <caret line="294" column="32" selection-start-line="294" selection-start-column="32" selection-end-line="294" selection-end-column="32" />
+          <caret line="295" column="32" selection-start-line="295" selection-start-column="32" selection-end-line="295" selection-end-column="32" />
+          <caret line="296" column="32" selection-start-line="296" selection-start-column="32" selection-end-line="296" selection-end-column="32" />
+          <caret line="297" column="32" selection-start-line="297" selection-start-column="32" selection-end-line="297" selection-end-column="32" />
+          <caret line="298" column="36" selection-start-line="298" selection-start-column="36" selection-end-line="298" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/unitsection/controller/UnitsectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/controller/ProjectunitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.6.RELEASE/spring-tx-5.0.6.RELEASE.jar!/org/springframework/dao/support/PersistenceExceptionTranslationInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="512" selection-start-line="512" selection-end-line="512" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/core/PreparedStatementCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/core/PreparedStatementCreator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar!/com/mysql/jdbc/ConnectionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="2777" column="29" selection-start-line="2777" selection-start-column="29" selection-end-line="2777" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/common/SuperJdbcTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/service/ScorebaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.0.6.RELEASE/spring-jdbc-5.0.6.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2793">
+          <caret line="209" column="19" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/dao/ScorebaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="393" selection-start-line="30" selection-start-column="4" selection-end-line="31" selection-end-column="393" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="294" selection-start-line="294" selection-end-line="294" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/dao/ScorezoneDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="292" selection-start-line="15" selection-start-column="292" selection-end-line="15" selection-end-column="292" />
+          <caret line="12" column="278" selection-start-line="12" selection-start-column="278" selection-end-line="12" selection-end-column="278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/dao/jdbc/impl/ScorezoneDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="16" column="294" selection-start-line="16" selection-start-column="294" selection-end-line="16" selection-end-column="294" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/service/impl/ScorezoneServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/service/ScorezoneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="292" selection-start-line="13" selection-start-column="292" selection-end-line="13" selection-end-column="292" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/service/impl/ScorebaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-370">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorezone/controller/ScorezoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/dao/ScoreformulaDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="30" column="102" selection-start-line="10" selection-start-column="4" selection-end-line="30" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/service/ScoreformulaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/controller/ScoreformulaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="129" column="98" lean-forward="true" selection-start-line="129" selection-start-column="98" selection-end-line="129" selection-end-column="98" />
+          <folding>
+            <element signature="docComment;class#ScoreformulaController#0" />
+            <element signature="e#646#657#0" />
+            <element signature="docComment;method#scoreformulaAdd#0;class#ScoreformulaController#0" />
+            <element signature="e#988#1031#0" />
+            <element signature="method#scoreformulaAdd#0;class#ScoreformulaController#0" />
+            <element signature="docComment;method#scoreformulaUpdate#0;class#ScoreformulaController#0" />
+            <element signature="e#1813#1859#0" />
+            <element signature="method#scoreformulaUpdate#0;class#ScoreformulaController#0" />
+            <element signature="docComment;method#scoreformulaDel#0;class#ScoreformulaController#0" />
+            <element signature="e#2546#2589#0" />
+            <element signature="method#scoreformulaDel#0;class#ScoreformulaController#0" />
+            <element signature="docComment;method#selectScoreformulaList#0;class#ScoreformulaController#0" />
+            <element signature="e#3363#3413#0" />
+            <element signature="method#selectScoreformulaList#0;class#ScoreformulaController#0" />
+            <element signature="docComment;method#selectScoreformulaCount#0;class#ScoreformulaController#0" />
+            <element signature="e#4415#4466#0" />
+            <element signature="method#selectScoreformulaCount#0;class#ScoreformulaController#0" />
+            <element signature="docComment;method#selectScoreformula#0;class#ScoreformulaController#0" />
+            <element signature="e#5230#5276#0" />
+            <element signature="method#selectScoreformula#0;class#ScoreformulaController#0" />
+            <element signature="docComment;method#selectGetScoreformulaList#0;class#ScoreformulaController#0" />
+            <element signature="e#5875#5928#0" />
+            <element signature="method#selectGetScoreformulaList#0;class#ScoreformulaController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/service/impl/ScoreformulaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="77" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoreformula/dao/jdbc/impl/ScoreformulaDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="63" column="137" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/controller/ScorebaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="273" column="45" selection-start-line="273" selection-start-column="30" selection-end-line="273" selection-end-column="45" />
+          <folding>
+            <element signature="docComment;class#ScorebaseController#0" />
+            <element signature="e#720#731#0" />
+            <element signature="docComment;method#ScorebaseAdd#0;class#ScorebaseController#0" />
+            <element signature="e#1795#1835#0" />
+            <element signature="method#ScorebaseAdd#0;class#ScorebaseController#0" />
+            <element signature="docComment;method#scorebaseUpdate#0;class#ScorebaseController#0" />
+            <element signature="e#3735#3778#0" />
+            <element signature="docComment;method#scorebaseDel#0;class#ScorebaseController#0" />
+            <element signature="e#4912#4952#0" />
+            <element signature="method#scorebaseDel#0;class#ScorebaseController#0" />
+            <element signature="docComment;method#selectScorebaseList#0;class#ScorebaseController#0" />
+            <element signature="e#6420#6467#0" />
+            <element signature="method#selectScorebaseList#0;class#ScorebaseController#0" />
+            <element signature="docComment;method#selectScorebaseCount#0;class#ScorebaseController#0" />
+            <element signature="e#8632#8680#0" />
+            <element signature="method#selectScorebaseCount#0;class#ScorebaseController#0" />
+            <element signature="docComment;method#selectGetScorebaseList#0;class#ScorebaseController#0" />
+            <element signature="e#11203#11253#0" />
+            <element signature="method#selectGetScorebaseList#0;class#ScorebaseController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/dao/jdbc/impl/UserDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="90" selection-start-column="7" selection-end-line="97" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="55" column="83" selection-start-line="55" selection-start-column="83" selection-end-line="55" selection-end-column="83" />
+          <folding>
+            <element signature="docComment;class#UserController#0" />
+            <element signature="e#582#592#0" />
+            <element signature="docComment;method#userAdd#0;class#UserController#0" />
+            <element signature="e#1090#1125#0" />
+            <element signature="method#userAdd#0;class#UserController#0" />
+            <element signature="docComment;method#userUpdate#0;class#UserController#0" />
+            <element signature="e#2948#2986#0" />
+            <element signature="method#userUpdate#0;class#UserController#0" />
+            <element signature="docComment;method#userDel#0;class#UserController#0" />
+            <element signature="e#4246#4281#0" />
+            <element signature="method#userDel#0;class#UserController#0" />
+            <element signature="docComment;method#login#0;class#UserController#0" />
+            <element signature="e#4870#4900#0" />
+            <element signature="method#login#0;class#UserController#0" />
+            <element signature="docComment;method#getLogout#0;class#UserController#0" />
+            <element signature="e#6184#6221#0" />
+            <element signature="method#getLogout#0;class#UserController#0" />
+            <element signature="docComment;method#selectUserList#0;class#UserController#0" />
+            <element signature="e#6655#6697#0" />
+            <element signature="method#selectUserList#0;class#UserController#0" />
+            <element signature="docComment;method#selectUserCount#0;class#UserController#0" />
+            <element signature="e#7635#7678#0" />
+            <element signature="method#selectUserCount#0;class#UserController#0" />
+            <element signature="docComment;method#selectUser#0;class#UserController#0" />
+            <element signature="e#8502#8540#0" />
+            <element signature="method#selectUser#0;class#UserController#0" />
+            <element signature="docComment;method#statusUpdate#0;class#UserController#0" />
+            <element signature="e#9015#9052#0" />
+            <element signature="method#statusUpdate#0;class#UserController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/CsmsDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/CrossDomainConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/PermissionVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/score/service/impl/ScoreServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/score/service/ScoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/score/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="84" column="105" selection-start-line="84" selection-start-column="105" selection-end-line="84" selection-end-column="105" />
+          <folding>
+            <element signature="docComment;class#ScoreController#0" />
+            <element signature="e#625#636#0" />
+            <element signature="docComment;method#scoreAdd#0;class#ScoreController#0" />
+            <element signature="e#1004#1040#0" />
+            <element signature="docComment;method#scoreUpdate#0;class#ScoreController#0" />
+            <element signature="docComment;method#scoreDel#0;class#ScoreController#0" />
+            <element signature="method#scoreDel#0;class#ScoreController#0" />
+            <element signature="docComment;method#selectScoreList#0;class#ScoreController#0" />
+            <element signature="docComment;method#selectScoreCount#0;class#ScoreController#0" />
+            <element signature="docComment;method#selectScore#0;class#ScoreController#0" />
+            <element signature="docComment;method#selectGetScoreList#0;class#ScoreController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/score/dao/ScoreDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/dao/ScoresumDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="32" column="273" selection-start-line="32" selection-start-column="273" selection-end-line="32" selection-end-column="273" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/service/ScoresumService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/service/impl/ScoresumServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/project/dao/jdbc/impl/ProjectDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1102">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/projectunit/dao/jdbc/impl/ProjectunitDaoJdbcImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
+        <state relative-caret-position="2299">
           <caret line="137" column="37" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/score/dao/jdbc/impl/ScoreDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/dao/jdbc/impl/ScoresumDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scorebase/dao/jdbc/impl/ScorebaseDaoJdbcImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="60" column="18" selection-start-line="54" selection-start-column="7" selection-end-line="60" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/net/mine/scoresum/controller/ScoresumController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="192" column="43" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>

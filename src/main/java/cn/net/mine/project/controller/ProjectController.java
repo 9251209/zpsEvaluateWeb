@@ -33,21 +33,21 @@ public class ProjectController {
      * 添加
      *
      * @param response
-     * @param prono
-     * @param proname
-     * @param type
-     * @param userno
-     * @param totalInvestmentAmount
-     * @param coveredArea
-     * @param purpose
-     * @param brief
-     * @param leader
-     * @param address
-     * @param consCompany
-     * @param buildCompany
-     * @param superCompany
-     * @param designCompany
-     * @param prospectCompany
+     * @param prono 项目编号
+     * @param proname   项目名称
+     * @param type  项目类型
+     * @param userno    所属用户
+     * @param totalInvestmentAmount 总投资额
+     * @param coveredArea   建筑面积
+     * @param purpose   项目功能
+     * @param brief 工程概括
+     * @param leader    项目负责人
+     * @param address   地址
+     * @param consCompany   施工单位
+     * @param buildCompany  建设单位
+     * @param superCompany  监理单位
+     * @param designCompany 设计单位
+     * @param prospectCompany   勘察单位
      * @return
      */
     @RequestMapping(value = "/projectAdd")
@@ -94,21 +94,21 @@ public class ProjectController {
      *
      * @param response
      * @param id
-     * @param prono
-     * @param proname
-     * @param type
-     * @param userno
-     * @param totalInvestmentAmount
-     * @param coveredArea
-     * @param purpose
-     * @param brief
-     * @param leader
-     * @param address
-     * @param consCompany
-     * @param buildCompany
-     * @param superCompany
-     * @param designCompany
-     * @param prospectCompany
+     * @param prono 项目编号
+     * @param proname   项目名称
+     * @param type  项目类型
+     * @param userno    所属用户
+     * @param totalInvestmentAmount 总投资额
+     * @param coveredArea   建筑面积
+     * @param purpose   项目功能
+     * @param brief 工程概括
+     * @param leader    项目负责人
+     * @param address   地址
+     * @param consCompany   施工单位
+     * @param buildCompany  建设单位
+     * @param superCompany  监理单位
+     * @param designCompany 设计单位
+     * @param prospectCompany   勘察单位
      * @return
      */
     @RequestMapping(value = "/projectUpdate")
@@ -170,21 +170,21 @@ public class ProjectController {
      * @param response
      * @param pageNo
      * @param pagesize
-     * @param prono
-     * @param proname
-     * @param type
-     * @param userno
-     * @param totalInvestmentAmount
-     * @param coveredArea
-     * @param purpose
-     * @param brief
-     * @param leader
-     * @param address
-     * @param consCompany
-     * @param buildCompany
-     * @param superCompany
-     * @param designCompany
-     * @param prospectCompany
+     * @param prono     项目编号
+     * @param proname   项目名称
+     * @param type  项目类型
+     * @param userno    所属用户
+     * @param totalInvestmentAmount 总投资额
+     * @param coveredArea   建筑面积
+     * @param purpose   项目功能
+     * @param brief 工程概括
+     * @param leader    项目负责人
+     * @param address   地址
+     * @param consCompany   施工单位
+     * @param buildCompany  建设单位
+     * @param superCompany  监理单位
+     * @param designCompany 设计单位
+     * @param prospectCompany   勘察单位
      * @return
      */
     @RequestMapping(value = "/selectProjectList")
@@ -217,20 +217,20 @@ public class ProjectController {
      * @param response
      * @param pagesize
      * @param prono
-     * @param proname
-     * @param type
-     * @param userno
-     * @param totalInvestmentAmount
-     * @param coveredArea
-     * @param purpose
-     * @param brief
-     * @param leader
-     * @param address
-     * @param consCompany
-     * @param buildCompany
-     * @param superCompany
-     * @param designCompany
-     * @param prospectCompany
+     * @param proname   项目编号
+     * @param type  项目名称
+     * @param userno    项目类型
+     * @param totalInvestmentAmount 所属用户
+     * @param coveredArea   总投资额
+     * @param purpose   建筑面积
+     * @param brief 项目功能
+     * @param leader    工程概括
+     * @param address   项目负责人
+     * @param consCompany   地址
+     * @param buildCompany  施工单位
+     * @param superCompany  建设单位
+     * @param designCompany 监理单位
+     * @param prospectCompany   设计单位
      * @return
      */
     @RequestMapping(value = "/selectProjectCount")
@@ -282,21 +282,21 @@ public class ProjectController {
      * 不分页查询
      *
      * @param response
-     * @param prono
-     * @param proname
-     * @param type
-     * @param userno
-     * @param totalInvestmentAmount
-     * @param coveredArea
-     * @param purpose
-     * @param brief
-     * @param leader
-     * @param address
-     * @param consCompany
-     * @param buildCompany
-     * @param superCompany
-     * @param designCompany
-     * @param prospectCompany
+     * @param prono 项目编号
+     * @param proname   项目名称
+     * @param type  项目类型
+     * @param userno    所属用户
+     * @param totalInvestmentAmount 总投资额
+     * @param coveredArea   建筑面积
+     * @param purpose   项目功能
+     * @param brief 工程概括
+     * @param leader    项目负责人
+     * @param address   地址
+     * @param consCompany   施工单位
+     * @param buildCompany  建设单位
+     * @param superCompany  监理单位
+     * @param designCompany 设计单位
+     * @param prospectCompany   勘察单位
      * @return
      */
     @RequestMapping(value = "/selectGetProjectList")
