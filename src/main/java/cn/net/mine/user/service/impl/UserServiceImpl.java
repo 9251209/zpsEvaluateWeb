@@ -59,7 +59,17 @@ public class UserServiceImpl implements UserService {
         // TODO Auto-generated method stub
         return userDao.count(userno, status);
     }
+    @Override
+    public List<Map<String, Object>> selectUserLists(Integer pageNo, Integer pagesize, String userno, String status) {
+        // TODO Auto-generated method stub
+        return userDao.selectUserLists(pageNo, pagesize, userno, status);
+    }
 
+    @Override
+    public Integer counts(String userno, String status) {
+        // TODO Auto-generated method stub
+        return userDao.counts(userno, status);
+    }
     @Override
     public List<Map<String, Object>> selectUser(String id) {
         // TODO Auto-generated method stub
@@ -67,7 +77,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Object statusUpdate(String id) {
-        return this.userDao.statusUpdate(id);
+    public Object statusUpdate(String id,String status) {
+        return this.userDao.statusUpdate(id,status);
     }
 }

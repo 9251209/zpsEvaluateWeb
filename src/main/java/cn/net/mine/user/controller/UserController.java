@@ -176,6 +176,13 @@ public class UserController {
                 ro.setData(null);
                 return ro;
             }
+            //审核未通过
+            if (map.get("status").equals("2")) {
+                ro.setCode("1");
+                ro.setMsg("未通过审核！");
+                ro.setData(null);
+                return ro;
+            }
             // 添加session
             CommonUtils.setCurrentUserInfo(map);
             Map<String, Object> maps = CommonUtils.getCurrentUserInfo();
@@ -273,6 +280,69 @@ public class UserController {
 
 
     /**
+     * 分页查询
+     *
+     * @param response
+     * @param pageNo
+     * @param pagesize
+     * @param userno
+     * @param status
+     * @return
+     */
+    @RequestMapping(value = "/selectUserLists")
+    @ResponseBody
+    public ReturnObject selectUserLists(HttpServletResponse response, @RequestParam(value = "pageNo") Integer pageNo,
+                                       @RequestParam(value = "pagesize") Integer pagesize, @RequestParam(value = "userno") String userno,
+                                       @RequestParam(value = "status") String status) {
+
+        ReturnObject ro = new ReturnObject();
+        if (pageNo == null || pageNo.equals("")) {
+            pageNo = 1;
+        }
+        if (pagesize == null || pagesize.equals("")) {
+            pagesize = 1;
+        }
+
+        List<Map<String, Object>> list = userService.selectUserLists(pageNo, pagesize, userno, status);
+
+        ro.setCode("1");
+        ro.setMsg("查询成功！");
+        ro.setData(list);
+        return ro;
+    }
+
+    /**
+     * 查询总页数
+     *
+     * @param response
+     * @param pagesize
+     * @param userno
+     * @param status
+     * @return
+     */
+    @RequestMapping(value = "/selectUserCounts")
+    @ResponseBody
+    public ReturnObject selectUserCounts(HttpServletResponse response,
+                                        @RequestParam(value = "pagesize") Integer pagesize, @RequestParam(value = "userno") String userno,
+                                        @RequestParam(value = "status") String status) {
+
+        ReturnObject ro = new ReturnObject();
+
+        if (pagesize == null || pagesize.equals("")) {
+            pagesize = 1;
+        }
+
+        double count = new BigDecimal(userService.counts(userno, status)).divide(new BigDecimal(1)).doubleValue();
+        Integer b = (int) Math.ceil(count / pagesize);
+        ro.setCode("1");
+        ro.setMsg("查询总页数！");
+        ro.setData(b);
+        return ro;
+    }
+
+
+
+    /**
      * 查询单条
      *
      * @param response
@@ -304,12 +374,16 @@ public class UserController {
 
     @PostMapping(value = "/statusUpdate")
     @ResponseBody
-    public ReturnObject statusUpdate(HttpServletResponse response, @RequestParam(value = "id") String id) {
+    public ReturnObject statusUpdate(HttpServletResponse response, @RequestParam(value = "id") String id ,String status) {
         ReturnObject ro = new ReturnObject();
         try {
+            String a ="已通过!";
+            if(status.equals("2")){
+                a="已拒绝!";
+            }
             ro.setCode("1");
-            ro.setMsg("审核成功！");
-            ro.setData(this.userService.statusUpdate(id));
+            ro.setMsg(a);
+            ro.setData(this.userService.statusUpdate(id,status));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();

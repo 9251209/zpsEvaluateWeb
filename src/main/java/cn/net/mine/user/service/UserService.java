@@ -31,9 +31,15 @@ public interface UserService extends SuperService {
     // 查询总条数
     Integer count(String userno, String status);
 
+    // 用户列表
+    List<Map<String, Object>> selectUserLists(Integer pageNo, Integer pagesize, String userno, String status);
+
+    // 查询总条数
+    Integer counts(String userno, String status);
+
     //查询单条
     List<Map<String, Object>> selectUser(String id);
 
     //审核
-   Object statusUpdate(String id );
+   Object statusUpdate(String id,String status );
 }

@@ -43,14 +43,14 @@ public class ScoreController {
      */
     @RequestMapping(value = "/scoreAdd")
     @ResponseBody
-    public ReturnObject scoreAdd(HttpServletResponse response, String prono, String unitno, String sectionno, String type, String tablename, String score) {
+    public ReturnObject scoreAdd(HttpServletResponse response, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
         ReturnObject ro = new ReturnObject();
         try {
 
 
             ro.setCode("1");
             ro.setMsg("添加成功！");
-            ro.setData(this.scoreService.scoreAdd(prono, unitno, sectionno, type, tablename, score));
+            ro.setData(this.scoreService.scoreAdd(prono, unitno, sectionno, type, tablename, score, scorename ));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();
@@ -76,13 +76,13 @@ public class ScoreController {
      */
     @RequestMapping(value = "/scoreUpdate")
     @ResponseBody
-    public ReturnObject scoreUpdate(HttpServletResponse response, String id, String prono, String unitno, String sectionno, String type, String tablename, String score) {
+    public ReturnObject scoreUpdate(HttpServletResponse response, String id, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
         ReturnObject ro = new ReturnObject();
         try {
 
             ro.setCode("1");
             ro.setMsg("编辑成功！");
-            ro.setData(this.scoreService.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score));
+            ro.setData(this.scoreService.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score, scorename ));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();
@@ -138,7 +138,7 @@ public class ScoreController {
     @ResponseBody
     public ReturnObject selectScoreList(HttpServletResponse response, @RequestParam(value = "pageNo") Integer pageNo,
                                         @RequestParam(value = "pagesize") Integer pagesize,
-                                        String prono, String unitno, String sectionno, String type, String tablename, String score) {
+                                        String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
 
         ReturnObject ro = new ReturnObject();
         if (pageNo == null || pageNo.equals("")) {
@@ -148,7 +148,7 @@ public class ScoreController {
             pagesize = 1;
         }
 
-        List<Map<String, Object>> list = scoreService.selectScoreList(pageNo, pagesize, prono, unitno, sectionno, type, tablename, score);
+        List<Map<String, Object>> list = scoreService.selectScoreList(pageNo, pagesize, prono, unitno, sectionno, type, tablename, score, scorename );
 
         ro.setCode("1");
         ro.setMsg("查询成功！");
@@ -173,7 +173,7 @@ public class ScoreController {
     @RequestMapping(value = "/selectScoreCount")
     @ResponseBody
     public ReturnObject selectScoreCount(HttpServletResponse response,
-                                         @RequestParam(value = "pagesize") Integer pagesize, String prono, String unitno, String sectionno, String type, String tablename, String score) {
+                                         @RequestParam(value = "pagesize") Integer pagesize, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
 
         ReturnObject ro = new ReturnObject();
 
@@ -181,7 +181,7 @@ public class ScoreController {
             pagesize = 1;
         }
 
-        double count = new BigDecimal(scoreService.count(prono, unitno, sectionno, type, tablename, score)).divide(new BigDecimal(1)).doubleValue();
+        double count = new BigDecimal(scoreService.count(prono, unitno, sectionno, type, tablename, score, scorename )).divide(new BigDecimal(1)).doubleValue();
 
         int b = (int) Math.ceil(count / pagesize);
         ro.setCode("1");
@@ -228,12 +228,12 @@ public class ScoreController {
     @RequestMapping(value = "/selectGetScoreList")
     @ResponseBody
     public ReturnObject selectGetScoreList(HttpServletResponse response,
-                                           String prono, String unitno, String sectionno, String type, String tablename, String score) {
+                                           String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
 
         ReturnObject ro = new ReturnObject();
 
 
-        List<Map<String, Object>> list = scoreService.selectGetScoreList(prono, unitno, sectionno, type, tablename, score);
+        List<Map<String, Object>> list = scoreService.selectGetScoreList(prono, unitno, sectionno, type, tablename, score, scorename );
 
         ro.setCode("1");
         ro.setMsg("查询成功！");

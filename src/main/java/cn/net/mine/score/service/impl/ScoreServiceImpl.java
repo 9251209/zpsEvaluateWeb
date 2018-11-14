@@ -17,13 +17,13 @@ public class ScoreServiceImpl implements ScoreService {
     private ScoreDao scoreDao;
 
     @Override
-    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score  ) {
-        return this.scoreDao.scoreAdd(prono, unitno, sectionno, type, tablename, score);
+    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename  ) {
+        return this.scoreDao.scoreAdd(prono, unitno, sectionno, type, tablename, score, scorename );
     }
 
     @Override
-    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score  ) {
-        return this.scoreDao.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score);
+    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename   ) {
+        return this.scoreDao.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score,scorename );
     }
 
     @Override
@@ -32,13 +32,13 @@ public class ScoreServiceImpl implements ScoreService {
     }
 
     @Override
-    public List<Map<String, Object>> selectScoreList(Integer pageNo, Integer pagesize, String prono, String unitno, String sectionno, String type, String tablename, String score   ) {
-        return this.scoreDao.selectScoreList(pageNo, pagesize, prono, unitno, sectionno, type, tablename, score);
+    public List<Map<String, Object>> selectScoreList(Integer pageNo, Integer pagesize, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename    ) {
+        return this.scoreDao.selectScoreList(pageNo, pagesize, prono, unitno, sectionno, type, tablename, score, scorename );
     }
 
     @Override
-    public Integer count(String prono, String unitno, String sectionno, String type, String tablename, String score   ) {
-        return this.scoreDao.count(prono, unitno, sectionno, type, tablename, score);
+    public Integer count(String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename   ) {
+        return this.scoreDao.count(prono, unitno, sectionno, type, tablename, score,scorename );
     }
 
     @Override
@@ -47,7 +47,7 @@ public class ScoreServiceImpl implements ScoreService {
     }
 
     @Override
-    public List<Map<String, Object>> selectGetScoreList(String prono, String unitno, String sectionno, String type, String tablename, String score   ) {
-        return this.scoreDao.selectGetScoreList(prono, unitno, sectionno, type, tablename, score);
+    public List<Map<String, Object>> selectGetScoreList(String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename   ) {
+        return this.scoreDao.selectGetScoreList(prono, unitno, sectionno, type, tablename, score,scorename );
     }
 }

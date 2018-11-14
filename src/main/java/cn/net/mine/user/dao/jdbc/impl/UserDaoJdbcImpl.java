@@ -151,7 +151,41 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
             sql.append(" and u.userno LIKE '%").append(userno).append("%'");
         }
         if (status != null && !status.equals("")) {
-            sql.append(" AND u.status LIKE '%'").append(status).append("%'");
+            sql.append(" AND u.status LIKE '%").append(status).append("%'");
+        }
+
+        return jdbcTemplateCsms.queryForList(sql.toString()).size();
+    }
+
+
+    @Override
+    public List<Map<String, Object>> selectUserLists(Integer pageNo, Integer pagesize, String userno, String status) {
+        // TODO Auto-generated method stub
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT * from User u where 1=1 ");
+        if (userno != null && !userno.equals("")) {
+            sql.append(" and u.userno LIKE '%").append(userno).append("%'");
+        }
+        if (status != null && !status.equals("")) {
+            sql.append(" AND u.status != '").append(status).append("'");
+        }
+
+        sql.append(" limit " + (pageNo - 1) * pagesize + " , " + pagesize + " ");
+
+        return jdbcTemplateCsms.queryForList(sql.toString());
+
+    }
+
+    @Override
+    public Integer counts(String userno, String status) {
+        // TODO Auto-generated method stub
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT * from User u where 1=1 ");
+        if (userno != null && !userno.equals("")) {
+            sql.append(" and u.userno LIKE '%").append(userno).append("%'");
+        }
+        if (status != null && !status.equals("")) {
+            sql.append(" AND u.status != '").append(status).append("'");
         }
 
         return jdbcTemplateCsms.queryForList(sql.toString()).size();
@@ -173,11 +207,11 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
 
 
     @Override
-    public Object statusUpdate(String id) {
+    public Object statusUpdate(String id ,String status) {
         StringBuffer sql = new StringBuffer();
         sql.append("UPDATE USER SET ");
 
-        sql.append(" status = '").append("1").append("',");
+        sql.append(" status = '").append(status).append("',");
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mmm:ss");
         sql.append(" statusdate = '").append(sdf.format(new Date())).append("'");

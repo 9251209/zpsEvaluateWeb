@@ -15,26 +15,27 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
 
 
     @Override
-    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score ) {
+    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
         StringBuffer sql = new StringBuffer();
 
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // String format = sdf.format(date);
-        sql.append("INSERT INTO Score( prono,  unitno,  sectionno,  type,  tablename,score  )");
+        sql.append("INSERT INTO Score( prono,  unitno,  sectionno,  type,  tablename,score ,scorename )");
         sql.append(" VALUES(");
         sql.append("'").append(prono).append("',");
         sql.append("'").append(unitno).append("',");
         sql.append("'").append(sectionno).append("',");
         sql.append("'").append(type).append("',");
         sql.append("'").append(tablename).append("',");
-        sql.append("'").append(score).append("'");
+        sql.append("'").append(score).append("',");
+        sql.append("'").append(scorename).append("'");
         sql.append(")");
         return jdbcTemplateCsms.update(sql.toString());
     }
 
     @Override
-    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score ) {
+    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
         // String format = sdf.format(date);
@@ -53,7 +54,8 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
             sql.append(" tablename = '").append(tablename).append("',");
         if (score != null && !score.equals(""))
             sql.append(" score = '").append(score).append("',");
-
+        if (scorename != null && !scorename.equals(""))
+            sql.append(" scorename = '").append(scorename).append("',");
 
         sql.append(" id = '").append(id).append("'");
         sql.append(" WHERE ID = '").append(id).append("'");
@@ -69,7 +71,7 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
 
 
     @Override
-    public List<Map<String, Object>> selectScoreList(Integer pageNo, Integer pagesize, String prono, String unitno, String sectionno, String type, String tablename, String score ) {
+    public List<Map<String, Object>> selectScoreList(Integer pageNo, Integer pagesize, String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
         // TODO Auto-generated method stub
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT * from Score u where 1=1 ");
@@ -90,6 +92,9 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
         }
         if (score != null && !score.equals("")) {
             sql.append(" and u.score LIKE '%").append(score).append("%'");
+        }
+        if (scorename != null && !scorename.equals("")) {
+            sql.append(" and u.scorename LIKE '%").append(scorename).append("%'");
         }
 
         sql.append(" limit " + (pageNo - 1) * pagesize + " , " + pagesize + " ");
@@ -99,7 +104,7 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
     }
 
     @Override
-    public Integer count(String prono, String unitno, String sectionno, String type, String tablename, String score ) {
+    public Integer count(String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
         // TODO Auto-generated method stub
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT * from Score u where 1=1 ");
@@ -120,6 +125,9 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
         }
         if (score != null && !score.equals("")) {
             sql.append(" and u.score LIKE '%").append(score).append("%'");
+        }
+        if (scorename != null && !scorename.equals("")) {
+            sql.append(" and u.scorename LIKE '%").append(scorename).append("%'");
         }
 
         return jdbcTemplateCsms.queryForList(sql.toString()).size();
@@ -141,7 +149,7 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
 
 
     @Override
-    public List<Map<String, Object>> selectGetScoreList(String prono, String unitno, String sectionno, String type, String tablename, String score) {
+    public List<Map<String, Object>> selectGetScoreList(String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT * from Score u where 1=1 ");
         if (prono != null && !prono.equals("")) {
@@ -162,9 +170,27 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
         if (score != null && !score.equals("")) {
             sql.append(" and u.score LIKE '%").append(score).append("%'");
         }
-
+        if (scorename != null && !scorename.equals("")) {
+            sql.append(" and u.scorename LIKE '%").append(scorename).append("%'");
+        }
         return jdbcTemplateCsms.queryForList(sql.toString());
     }
 
+    @Override
+    public Object Del(String prono, String unitno, String sectionno) {
+        StringBuffer sql = new StringBuffer();
+        sql.append("DELETE FROM Score WHERE  1=1 ");
 
+        if (prono != null && !prono.equals("")) {
+            sql.append(" and prono = '").append(prono).append("'");
+        }
+        if (unitno != null && !unitno.equals("")) {
+            sql.append(" and unitno ='").append(unitno).append("'");
+        }
+        if (sectionno != null && !sectionno.equals("")) {
+            sql.append(" and sectionno = '").append(sectionno).append("'");
+        }
+
+        return jdbcTemplateCsms.update(sql.toString());
+    }
 }

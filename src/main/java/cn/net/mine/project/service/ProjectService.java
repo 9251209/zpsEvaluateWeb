@@ -39,4 +39,6 @@ public interface ProjectService extends SuperService {
      List<Map<String, Object>> selectGetProjectList( String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany);
 
     List<Map<String, Object>> GetProjectList( String userno);
+
+
 }

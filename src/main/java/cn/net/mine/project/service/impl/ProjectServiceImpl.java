@@ -6,6 +6,7 @@ import java.util.Map;
 import cn.net.mine.project.dao.ProjectDao;
 import cn.net.mine.project.service.ProjectService;
 import cn.net.mine.projectunit.dao.ProjectunitDao;
+import cn.net.mine.scoresum.dao.ScoresumDao;
 import cn.net.mine.unitsection.dao.UnitsectionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,7 @@ public class ProjectServiceImpl implements ProjectService {
     private ProjectunitDao projectunitDao;
     @Autowired
     private UnitsectionDao unitsectionDao;
+
 
     @Override
     public Object projectAdd(String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
@@ -98,4 +100,6 @@ public class ProjectServiceImpl implements ProjectService {
 
         return projectList;
     }
+
+
 }
