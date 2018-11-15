@@ -64,7 +64,7 @@ public class UserController {
                 return ro;
             }
             ro.setCode("1");
-            ro.setMsg("添加成功！");
+            ro.setMsg("注册成功！请等待审核！");
             ro.setData(this.userService.userAdd(userno, password, telphone, status, flag, realname, sex, age, education,
                     position));
             return ro;

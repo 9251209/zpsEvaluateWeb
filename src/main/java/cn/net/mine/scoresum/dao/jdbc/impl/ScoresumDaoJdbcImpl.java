@@ -106,13 +106,13 @@ public class ScoresumDaoJdbcImpl extends SuperJdbcTemplate implements ScoresumDa
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT * from Scoresum u where 1=1 ");
         if (prono != null && !prono.equals("")) {
-            sql.append(" and u.prono LIKE '%").append(prono).append("%'");
+            sql.append(" and u.prono = '").append(prono).append("'");
         }
         if (unitno != null && !unitno.equals("")) {
-            sql.append(" and u.unitno LIKE '%").append(unitno).append("%'");
+            sql.append(" and u.unitno = '").append(unitno).append("'");
         }
         if (sectionno != null && !sectionno.equals("")) {
-            sql.append(" and u.sectionno LIKE '%").append(sectionno).append("%'");
+            sql.append(" and u.sectionno = '").append(sectionno).append("'");
         }
         if (resourcevalue != null && !resourcevalue.equals("")) {
             sql.append(" and u.resourcevalue LIKE '%").append(resourcevalue).append("%'");
@@ -157,13 +157,13 @@ public class ScoresumDaoJdbcImpl extends SuperJdbcTemplate implements ScoresumDa
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT * from Scoresum u where 1=1 ");
         if (prono != null && !prono.equals("")) {
-            sql.append(" and u.prono LIKE '%").append(prono).append("%'");
+            sql.append(" and u.prono = '").append(prono).append("'");
         }
         if (unitno != null && !unitno.equals("")) {
-            sql.append(" and u.unitno LIKE '%").append(unitno).append("%'");
+            sql.append(" and u.unitno = '").append(unitno).append("'");
         }
         if (sectionno != null && !sectionno.equals("")) {
-            sql.append(" and u.sectionno LIKE '%").append(sectionno).append("%'");
+            sql.append(" and u.sectionno = '").append(sectionno).append("'");
         }
         if (resourcevalue != null && !resourcevalue.equals("")) {
             sql.append(" and u.resourcevalue LIKE '%").append(resourcevalue).append("%'");
