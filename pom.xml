@@ -55,10 +55,7 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<!-- spring boot log4j 日志管理框架 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-log4j</artifactId>
-		</dependency>
+
 		<!-- mysql 数据库连接驱动 -->
 		 <dependency>
 			<groupId>mysql</groupId>
@@ -127,12 +124,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
-				<version>2.1.0.BUILD-SNAPSHOT</version>
 			</plugin>
 		</plugins>
 	</build>
