@@ -32,7 +32,7 @@ public interface ProjectService extends SuperService {
                   String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany ,String prospectCompany );
 
     //查询单条
-    List<Map<String, Object>> selectProject(String id);
+    Map<String, Object> selectProject(String id);
 
 
     //不分页列表

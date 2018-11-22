@@ -17,13 +17,13 @@ public class ScoreServiceImpl implements ScoreService {
     private ScoreDao scoreDao;
 
     @Override
-    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename  ) {
-        return this.scoreDao.scoreAdd(prono, unitno, sectionno, type, tablename, score, scorename );
+    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename ,String weightnew  ) {
+        return this.scoreDao.scoreAdd(prono, unitno, sectionno, type, tablename, score, scorename, weightnew );
     }
 
     @Override
-    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename   ) {
-        return this.scoreDao.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score,scorename );
+    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename   ,String weightnew ) {
+        return this.scoreDao.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score,scorename, weightnew  );
     }
 
     @Override

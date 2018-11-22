@@ -43,6 +43,7 @@ public class ScorebaseController {
      * @param tablename      表名
      * @param formulaid      引用公式id
      * @param weight         权重
+     * @param weightnew      权重
      * @param parama         定义参数
      * @param paramb         定义参数
      * @param paramc         定义参数
@@ -65,12 +66,12 @@ public class ScorebaseController {
      */
     @RequestMapping(value = "/scorebaseAdd")
     @ResponseBody
-    public ReturnObject ScorebaseAdd(HttpServletResponse response, String type, String tablename, String formulaid, String weight, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
+    public ReturnObject ScorebaseAdd(HttpServletResponse response, String type, String tablename, String formulaid, String weight,String weightnew, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
         ReturnObject ro = new ReturnObject();
         try {
             ro.setCode("1");
             ro.setMsg("添加成功！");
-            ro.setData(this.scorebaseService.scorebaseAdd(type, tablename, formulaid, weight, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula));
+            ro.setData(this.scorebaseService.scorebaseAdd(type, tablename, formulaid, weight, weightnew, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,6 +91,7 @@ public class ScorebaseController {
      * @param tablename      表名
      * @param formulaid      引用公式id
      * @param weight         权重
+     * @param weightnew      权重
      * @param parama         定义参数
      * @param paramb         定义参数
      * @param paramc         定义参数
@@ -112,12 +114,12 @@ public class ScorebaseController {
      */
     @RequestMapping(value = "/scorebaseUpdate")
     @ResponseBody
-    public ReturnObject scorebaseUpdate(HttpServletResponse response, String id, String type, String tablename, String formulaid, String weight, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
+    public ReturnObject scorebaseUpdate(HttpServletResponse response, String id, String type, String tablename, String formulaid, String weight,String weightnew, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
         ReturnObject ro = new ReturnObject();
         try {
             ro.setCode("1");
             ro.setMsg("编辑成功！");
-            ro.setData(this.scorebaseService.scorebaseUpdate(id, type, tablename, formulaid, weight, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula));
+            ro.setData(this.scorebaseService.scorebaseUpdate(id, type, tablename, formulaid, weight, weightnew, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();

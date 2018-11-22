@@ -9,10 +9,10 @@ public interface ScoreService extends SuperService {
 
 
     // 添加
-    Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename  );
+    Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ,String weightnew  );
 
     // 修改
-    Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename   );
+    Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename ,String weightnew   );
 
     // 删除
     Object scoreDel(String id);

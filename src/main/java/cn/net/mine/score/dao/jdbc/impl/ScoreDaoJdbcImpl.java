@@ -15,13 +15,13 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
 
 
     @Override
-    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
+    public Object scoreAdd(String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename,String weightnew ) {
         StringBuffer sql = new StringBuffer();
 
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // String format = sdf.format(date);
-        sql.append("INSERT INTO Score( prono,  unitno,  sectionno,  type,  tablename,score ,scorename )");
+        sql.append("INSERT INTO Score( prono,  unitno,  sectionno,  type,  tablename,score ,scorename , weightnew )");
         sql.append(" VALUES(");
         sql.append("'").append(prono).append("',");
         sql.append("'").append(unitno).append("',");
@@ -29,13 +29,15 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
         sql.append("'").append(type).append("',");
         sql.append("'").append(tablename).append("',");
         sql.append("'").append(score).append("',");
-        sql.append("'").append(scorename).append("'");
+        sql.append("'").append(scorename).append("',");
+        sql.append("'").append(weightnew).append("'");
+
         sql.append(")");
         return jdbcTemplateCsms.update(sql.toString());
     }
 
     @Override
-    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename) {
+    public Object scoreUpdate(String id, String prono, String unitno, String sectionno, String type, String tablename, String score, String scorename,String weightnew) {
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
         // String format = sdf.format(date);
@@ -56,6 +58,9 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
             sql.append(" score = '").append(score).append("',");
         if (scorename != null && !scorename.equals(""))
             sql.append(" scorename = '").append(scorename).append("',");
+        if (weightnew != null && !weightnew.equals(""))
+            sql.append(" weightnew = '").append(weightnew).append("',");
+
 
         sql.append(" id = '").append(id).append("'");
         sql.append(" WHERE ID = '").append(id).append("'");

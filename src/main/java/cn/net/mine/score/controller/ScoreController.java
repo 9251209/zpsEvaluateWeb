@@ -43,14 +43,14 @@ public class ScoreController {
      */
     @RequestMapping(value = "/scoreAdd")
     @ResponseBody
-    public ReturnObject scoreAdd(HttpServletResponse response, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
+    public ReturnObject scoreAdd(HttpServletResponse response, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ,String weightnew ) {
         ReturnObject ro = new ReturnObject();
         try {
 
 
             ro.setCode("1");
             ro.setMsg("添加成功！");
-            ro.setData(this.scoreService.scoreAdd(prono, unitno, sectionno, type, tablename, score, scorename ));
+            ro.setData(this.scoreService.scoreAdd(prono, unitno, sectionno, type, tablename, score, scorename, weightnew  ));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();
@@ -76,13 +76,13 @@ public class ScoreController {
      */
     @RequestMapping(value = "/scoreUpdate")
     @ResponseBody
-    public ReturnObject scoreUpdate(HttpServletResponse response, String id, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
+    public ReturnObject scoreUpdate(HttpServletResponse response, String id, String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ,String weightnew  ) {
         ReturnObject ro = new ReturnObject();
         try {
 
             ro.setCode("1");
             ro.setMsg("编辑成功！");
-            ro.setData(this.scoreService.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score, scorename ));
+            ro.setData(this.scoreService.scoreUpdate(id, prono, unitno, sectionno, type, tablename, score, scorename , weightnew ));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();
@@ -228,7 +228,7 @@ public class ScoreController {
     @RequestMapping(value = "/selectGetScoreList")
     @ResponseBody
     public ReturnObject selectGetScoreList(HttpServletResponse response,
-                                           String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename ) {
+                                           String prono, String unitno, String sectionno, String type, String tablename, String score,String scorename  ) {
 
         ReturnObject ro = new ReturnObject();
 

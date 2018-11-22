@@ -269,7 +269,7 @@ public class ProjectController {
 
         ReturnObject ro = new ReturnObject();
 
-        Map<String, Object> map = projectService.selectProject(id).get(0);
+        Map<String, Object> map = projectService.selectProject(id);
 
         ro.setCode("1");
         ro.setMsg("查询成功！");

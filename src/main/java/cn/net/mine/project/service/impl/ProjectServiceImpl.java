@@ -59,8 +59,30 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public List<Map<String, Object>> selectProject(String id) {
-        return this.projectDao.selectProject(id);
+    public Map<String, Object> selectProject(String id) {
+        Map<String, Object> project= this.projectDao.selectProject(id).get(0);
+        //获取项目下所有单体
+        if (project.get("prono").toString() != null || !project.get("prono").toString().equals("")) {
+            List<Map<String, Object>> projectunitList = this.projectunitDao.selectGetProjectunitList(null, null, project.get("prono").toString());
+
+            for (Map<String, Object> projectunit : projectunitList) {
+                //获取单体下所有阶段
+                if (projectunit.get("unitno").toString() != null && !projectunit.get("unitno").toString().equals("")) {
+                    List<Map<String, Object>> unitsectionList = this.unitsectionDao.selectGetUnitsectionList(null, null, projectunit.get("unitno").toString());
+                    //为当前单体添加阶段
+                    projectunit.put("unitsectionList", unitsectionList);
+                } else {
+                    projectunit.put("unitsectionList", null);
+                }
+            }
+
+            //为当前项目添加单体
+            project.put("projectunitList", projectunitList);
+        } else {
+            //为当前项目添加单体
+            project.put("projectunitList", null);
+        }
+        return   project;
     }
 
 

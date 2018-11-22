@@ -21,13 +21,13 @@ public class ScorebaseServiceImpl implements ScorebaseService {
     private ScorezoneDao scorezoneDao;
 
     @Override
-    public Object scorebaseAdd(String type, String tablename, String formulaid, String weight, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
-        return this.scorebaseDao.scorebaseAdd(type, tablename, formulaid, weight, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula);
+    public Object scorebaseAdd(String type, String tablename, String formulaid, String weight,String weightnew, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
+        return this.scorebaseDao.scorebaseAdd(type, tablename, formulaid, weight, weightnew, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula);
     }
 
     @Override
-    public Object scorebaseUpdate(String id, String type, String tablename, String formulaid, String weight, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
-        return this.scorebaseDao.scorebaseUpdate(id,type, tablename, formulaid, weight, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula);
+    public Object scorebaseUpdate(String id, String type, String tablename, String formulaid, String weight, String weightnew, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
+        return this.scorebaseDao.scorebaseUpdate(id,type, tablename, formulaid, weight, weightnew, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula);
     }
 
     @Override

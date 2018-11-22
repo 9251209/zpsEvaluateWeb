@@ -16,7 +16,7 @@ public class ScorebaseDaoJdbcImpl extends SuperJdbcTemplate implements Scorebase
 
 
     @Override
-    public Object scorebaseAdd(String type, String tablename, String formulaid, String weight, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
+    public Object scorebaseAdd(String type, String tablename, String formulaid, String weight,String weightnew, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
         StringBuffer sql = new StringBuffer();
 
         UUID uuid= UUID.randomUUID();
@@ -25,13 +25,15 @@ public class ScorebaseDaoJdbcImpl extends SuperJdbcTemplate implements Scorebase
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // String format = sdf.format(date);
-        sql.append("INSERT INTO Scorebase(id, type, tablename, formulaid, weight, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula )");
+        sql.append("INSERT INTO Scorebase(id, type, tablename, formulaid, weight, weightnew, parama, paramb, paramc, paramd, paramy, paramformula, ua, ub, uc, ud, uy, uformula, explaina, explainb, explainc, explaind, explainy, explainformula )");
         sql.append(" VALUES(");
         sql.append("'").append(str).append("',");
         sql.append("'").append(type).append("',");
         sql.append("'").append(tablename).append("',");
         sql.append("'").append(formulaid).append("',");
         sql.append("'").append(weight).append("',");
+
+        sql.append("'").append(weightnew).append("',");
         sql.append("'").append(parama).append("',");
         sql.append("'").append(paramb).append("',");
         sql.append("'").append(paramc).append("',");
@@ -63,7 +65,7 @@ public class ScorebaseDaoJdbcImpl extends SuperJdbcTemplate implements Scorebase
     }
 
     @Override
-    public Object scorebaseUpdate(String id, String type, String tablename, String formulaid, String weight, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
+    public Object scorebaseUpdate(String id, String type, String tablename, String formulaid, String weight,String weightnew, String parama, String paramb, String paramc, String paramd, String paramy, String paramformula, String ua, String ub, String uc, String ud, String uy, String uformula, String explaina, String explainb, String explainc, String explaind, String explainy, String explainformula) {
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
         // String format = sdf.format(date);
@@ -79,6 +81,9 @@ public class ScorebaseDaoJdbcImpl extends SuperJdbcTemplate implements Scorebase
             sql.append(" formulaid = '").append(formulaid).append("',");
         if (weight != null && !weight.equals(""))
             sql.append(" weight = '").append(weight).append("',");
+
+        if (weightnew != null && !weightnew.equals(""))
+            sql.append(" weightnew = '").append(weightnew).append("',");
         if (parama != null && !parama.equals(""))
             sql.append(" parama = '").append(parama).append("',");
         if (paramb != null && !paramb.equals(""))
