@@ -21,9 +21,9 @@ public interface UserService extends SuperService {
     int findBtName(String userno);
 
     int findBtName(String userno, String id);
-
+    int findTelphone(String telphone);
     // 登陆
-    Map<String, Object> login(String userno, String pawwsord);
+    Map<String, Object> login(String userno, String password);
 
     // 用户列表
     List<Map<String, Object>> selectUserList(Integer pageNo, Integer pagesize, String userno, String status);

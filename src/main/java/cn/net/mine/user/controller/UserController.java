@@ -125,6 +125,57 @@ public class UserController {
         }
     }
 
+
+    /**
+     * 判断用户名是否重复
+     * @param response
+     * @param userno
+     * @return
+     */
+    @RequestMapping(value = "/findBtName")
+    @ResponseBody
+    public  ReturnObject findBtName(HttpServletResponse response, String userno){
+        ReturnObject ro = new ReturnObject();
+        try {
+            ro.setCode("1");
+            ro.setMsg("查询成功！");
+            ro.setData(this.userService.findBtName(userno));
+            return ro;
+        } catch (Exception e) {
+            e.printStackTrace();
+            ro.setCode("0");
+            ro.setMsg("系统繁忙请稍后再试！！！");
+            ro.setData(null);
+            return ro;
+        }
+    }
+
+
+    /**
+     * 判断手机号是否重复
+     * @param response
+     * @param telphone
+     * @return
+     */
+    @RequestMapping(value = "/findTelphone")
+    @ResponseBody
+    public  ReturnObject findTelphone(HttpServletResponse response, String telphone){
+        ReturnObject ro = new ReturnObject();
+        try {
+            ro.setCode("1");
+            ro.setMsg("查询成功！");
+            ro.setData(this.userService.findTelphone(telphone));
+            return ro;
+        } catch (Exception e) {
+            e.printStackTrace();
+            ro.setCode("0");
+            ro.setMsg("系统繁忙请稍后再试！！！");
+            ro.setData(null);
+            return ro;
+        }
+    }
+
+
     /**
      * 删除
      *

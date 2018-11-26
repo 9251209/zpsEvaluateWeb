@@ -32,5 +32,5 @@ public interface ScoreDao extends SuperDao {
     List<Map<String, Object>> selectGetScoreList(String prono, String unitno, String sectionno, String type, String tablename, String score ,String scorename);
 
     //删除历史纪录
-    Object Del(String prono, String unitno, String sectionno);
+    Object Del(String prono, String unitno, String sectionno,String scorename);
 }

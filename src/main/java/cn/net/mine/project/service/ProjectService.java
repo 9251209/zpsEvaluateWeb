@@ -9,11 +9,11 @@ public interface ProjectService extends SuperService {
 
     // 添加
     Object projectAdd(String prono, String proname, String type, String userno,  String totalInvestmentAmount,
-                      String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany ,String prospectCompany );
+                      String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany ,String prospectCompany ,String [] projectImage   ,String leaderPhone);
 
     // 修改
     Object projectUpdate(String id,String prono, String proname, String type, String userno,  String totalInvestmentAmount,
-                         String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany ,String prospectCompany );
+                         String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany ,String prospectCompany ,String [] projectImage,String leaderPhone);
 
     // 删除
     Object projectDel(String id);

@@ -59,9 +59,9 @@ public class ScoresumServiceImpl implements ScoresumService {
     }
 
     @Override
-    public Object Del(String prono, String unitno, String sectionno) {
-        this.scoresumDao.Del(prono, unitno, sectionno);
-        this.scoreDao.Del(prono, unitno, sectionno);
+    public Object Del(String prono, String unitno, String sectionno,String scorename) {
+        this.scoresumDao.Del(prono, unitno, sectionno, scorename);
+        this.scoreDao.Del(prono, unitno, sectionno, scorename);
 
         return "删除成功";
     }

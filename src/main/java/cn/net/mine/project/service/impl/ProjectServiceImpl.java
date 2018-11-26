@@ -24,13 +24,13 @@ public class ProjectServiceImpl implements ProjectService {
 
 
     @Override
-    public Object projectAdd(String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
-        return this.projectDao.projectAdd(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany);
+    public Object projectAdd(String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany,String [] projectImage,String leaderPhone) {
+        return this.projectDao.projectAdd(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany, projectImage, leaderPhone);
     }
 
     @Override
-    public Object projectUpdate(String id, String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
-        return this.projectDao.projectUpdate(id, prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany);
+    public Object projectUpdate(String id, String prono, String proname, String type, String userno, String totalInvestmentAmount, String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany,String [] projectImage,String leaderPhone) {
+        return this.projectDao.projectUpdate(id, prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany, projectImage, leaderPhone);
     }
 
     @Override

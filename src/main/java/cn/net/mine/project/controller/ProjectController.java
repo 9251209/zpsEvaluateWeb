@@ -53,13 +53,13 @@ public class ProjectController {
     @RequestMapping(value = "/projectAdd")
     @ResponseBody
     public ReturnObject projectAdd(HttpServletResponse response, String prono, String proname, String type, String userno, String totalInvestmentAmount,
-                                   String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
+                                   String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany,String [] projectImage ,String leaderPhone) {
         ReturnObject ro = new ReturnObject();
         try {
             int i = projectService.findBtName(prono);
             if (i > 0) {
                 ro.setCode("0");
-                ro.setMsg("用户名已存在请重新添加！！！");
+                ro.setMsg("编号已存在请重新添加！！！");
                 ro.setData(null);
                 return ro;
             }
@@ -78,7 +78,7 @@ public class ProjectController {
 
             ro.setCode("1");
             ro.setMsg("添加成功！");
-            ro.setData(this.projectService.projectAdd(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany));
+            ro.setData(this.projectService.projectAdd(prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany, projectImage, leaderPhone));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();
@@ -114,7 +114,7 @@ public class ProjectController {
     @RequestMapping(value = "/projectUpdate")
     @ResponseBody
     public ReturnObject projectUpdate(HttpServletResponse response, String id, String prono, String proname, String type, String userno, String totalInvestmentAmount,
-                                      String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
+                                      String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany,String [] projectImage,String leaderPhone) {
         ReturnObject ro = new ReturnObject();
         try {
             int i = projectService.findBtName(prono, id);
@@ -126,7 +126,7 @@ public class ProjectController {
             }
             ro.setCode("1");
             ro.setMsg("编辑成功！");
-            ro.setData(this.projectService.projectUpdate(id, prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany));
+            ro.setData(this.projectService.projectUpdate(id, prono, proname, type, userno, totalInvestmentAmount, coveredArea, purpose, brief, leader, address, consCompany, buildCompany, superCompany, designCompany, prospectCompany, projectImage, leaderPhone));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();

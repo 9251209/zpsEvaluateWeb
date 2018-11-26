@@ -3,6 +3,7 @@ package cn.net.mine.user.service.impl;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,9 +44,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Map<String, Object> login(String userno, String pawwsord) {
+    public int findTelphone(String telphone) {
+        return this.userDao.findTelphone(telphone);
+    }
+
+    @Override
+    public Map<String, Object> login(String userno, String password) {
         // TODO Auto-generated method stub
-        return userDao.login(userno, pawwsord);
+        List<Map<String, Object>> list=userDao.login(userno, password);
+        if (CollectionUtils.isNotEmpty(list)) {
+            Map<String, Object> map=list.get(0);
+            if(map.get("password").toString().equals(password)){
+                return map;
+            }
+        }
+        return null;
     }
 
     @Override

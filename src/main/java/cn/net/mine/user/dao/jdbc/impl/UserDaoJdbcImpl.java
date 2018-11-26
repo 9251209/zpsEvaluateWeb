@@ -111,17 +111,27 @@ public class UserDaoJdbcImpl extends SuperJdbcTemplate implements UserDao {
     }
 
     @Override
-    public Map<String, Object> login(String userno, String pawwsord) {
+    public int findTelphone(String telphone) {
+        StringBuffer sql = new StringBuffer();
+        sql.append("select count(id) from USER where telphone ='");
+        sql.append(telphone).append("'");
+        List<Integer> list = jdbcTemplateCsms.queryForList(sql.toString(), Integer.class);
+        if (CollectionUtils.isNotEmpty(list)) {
+            return list.get(0);
+        }
+        return 0;
+    }
+
+    @Override
+    public List<Map<String, Object>> login(String userno, String password) {
         // TODO Auto-generated method stub
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT * from User u ");
         sql.append(" WHERE u.userno = '").append(userno).append("'");
-        sql.append(" AND u.password = '").append(pawwsord).append("'");
+        sql.append(" or u.telphone = '").append(userno).append("'");
         List<Map<String, Object>> list = jdbcTemplateCsms.queryForList(sql.toString());
-        if (CollectionUtils.isNotEmpty(list)) {
-            return list.get(0);
-        }
-        return null;
+
+        return list;
     }
 
     @Override

@@ -182,7 +182,7 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
     }
 
     @Override
-    public Object Del(String prono, String unitno, String sectionno) {
+    public Object Del(String prono, String unitno, String sectionno ,String scorename) {
         StringBuffer sql = new StringBuffer();
         sql.append("DELETE FROM Score WHERE  1=1 ");
 
@@ -194,6 +194,9 @@ public class ScoreDaoJdbcImpl extends SuperJdbcTemplate implements ScoreDao {
         }
         if (sectionno != null && !sectionno.equals("")) {
             sql.append(" and sectionno = '").append(sectionno).append("'");
+        }
+        if (scorename != null && !scorename.equals("")) {
+            sql.append(" and scorename = '").append(scorename).append("'");
         }
 
         return jdbcTemplateCsms.update(sql.toString());

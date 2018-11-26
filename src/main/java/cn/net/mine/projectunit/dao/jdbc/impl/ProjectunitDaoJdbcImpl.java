@@ -43,7 +43,7 @@ public class ProjectunitDaoJdbcImpl extends SuperJdbcTemplate implements Project
         if (prono != null && !prono.equals(""))
             sql.append(" prono = '").append(prono).append("',");
 
-        sql.append(" id = '").append(id).append("',");
+        sql.append(" id = '").append(id).append("'");
         sql.append(" WHERE ID = '").append(id).append("'");
         return jdbcTemplateCsms.update(sql.toString());
     }

@@ -276,13 +276,13 @@ public class ScoresumController {
      */
     @RequestMapping(value = "/Del")
     @ResponseBody
-    public ReturnObject Del(HttpServletResponse response, String prono, String unitno, String sectionno) {
+    public ReturnObject Del(HttpServletResponse response, String prono, String unitno, String sectionno,String scorename) {
         ReturnObject ro = new ReturnObject();
         try {
 
             ro.setCode("1");
             ro.setMsg("删除成功！");
-            ro.setData(this.scoresumService.Del(prono, unitno, sectionno));
+            ro.setData(this.scoresumService.Del(prono, unitno, sectionno, scorename));
             return ro;
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,7 +1,9 @@
 package cn.net.mine.project.dao.jdbc.impl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import cn.net.mine.project.dao.ProjectDao;
 import org.apache.commons.collections.CollectionUtils;
@@ -70,16 +72,18 @@ public class ProjectDaoJdbcImpl extends SuperJdbcTemplate implements ProjectDao 
 
     @Override
     public Object projectAdd(String prono, String proname, String type, String userno, String totalInvestmentAmount,
-                             String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
+                             String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany, String[] projectImage, String leaderPhone) {
         StringBuffer sql = new StringBuffer();
 
-
+        UUID uuid= UUID.randomUUID();
+        String str = uuid.toString();
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // String format = sdf.format(date);
-        sql.append("INSERT INTO project( prono,  proname,  type,  userno,  totalInvestmentAmount,coveredArea, " +
-                " purpose,  brief,  leader,  address,  consCompany,  buildCompany,  superCompany,  designCompany ,  prospectCompany  )");
+        sql.append("INSERT INTO project( id,prono,  proname,  type,  userno,  totalInvestmentAmount,coveredArea, " +
+                " purpose,  brief,  leader,  address,  consCompany,  buildCompany,  superCompany,  designCompany ,  prospectCompany ,projectImage, leaderPhone  )");
         sql.append(" VALUES(");
+        sql.append("'").append(str).append("',");
         sql.append("'").append(prono).append("',");
         sql.append("'").append(proname).append("',");
         sql.append("'").append(type).append("',");
@@ -94,15 +98,21 @@ public class ProjectDaoJdbcImpl extends SuperJdbcTemplate implements ProjectDao 
         sql.append("'").append(buildCompany).append("',");
         sql.append("'").append(superCompany).append("',");
         sql.append("'").append(designCompany).append("',");
-        sql.append("'").append(prospectCompany).append("'");
+        sql.append("'").append(prospectCompany).append("',");
+        sql.append("'").append(Arrays.toString(projectImage)).append("',");
+        sql.append("'").append(leaderPhone).append("'");
 
         sql.append(")");
-        return jdbcTemplateCsms.update(sql.toString());
+        int a=jdbcTemplateCsms.update(sql.toString());
+        if(a>0){
+            return  str;
+        }
+        return null;
     }
 
     @Override
     public Object projectUpdate(String id, String prono, String proname, String type, String userno, String totalInvestmentAmount,
-                                String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany) {
+                                String coveredArea, String purpose, String brief, String leader, String address, String consCompany, String buildCompany, String superCompany, String designCompany, String prospectCompany, String[] projectImage, String leaderPhone) {
         // Date date = new Date();
         // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
         // String format = sdf.format(date);
@@ -139,6 +149,10 @@ public class ProjectDaoJdbcImpl extends SuperJdbcTemplate implements ProjectDao 
             sql.append(" prospectCompany = '").append(prospectCompany).append("',");
         if (proname != null && !proname.equals(""))
             sql.append(" proname = '").append(proname).append("',");
+        if (projectImage != null && !projectImage.equals(""))
+            sql.append(" projectImage = '").append(Arrays.toString(projectImage)).append("',");
+        if (leaderPhone != null && !leaderPhone.equals(""))
+            sql.append(" leaderPhone = '").append(leaderPhone).append("',");
 
         sql.append(" id = '").append(id).append("'");
         sql.append(" WHERE ID = '").append(id).append("'");

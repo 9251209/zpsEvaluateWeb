@@ -30,7 +30,7 @@ public interface ScoresumService extends SuperService {
     List<Map<String, Object>> selectGetScoresumList(String prono, String unitno, String sectionno, String resourcevalue, String energyvalue, String manpowervalue, String totalvalue, String starlevel, String resourcenum, String energynum, String manpowernum,String scorename,String userno);
 
     //删除历史纪录
-    Object Del(String prono, String unitno, String sectionno);
+    Object Del(String prono, String unitno, String sectionno,String scorename);
 
 
     //验证计算名称是否重复

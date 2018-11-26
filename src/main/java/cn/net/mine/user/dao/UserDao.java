@@ -23,8 +23,10 @@ public interface UserDao extends SuperDao {
 
     int findBtName(String userno, String id);
 
+    int findTelphone(String telphone);
+
     // 登陆
-    Map<String, Object> login(String userno, String pawwsord);
+    List<Map<String, Object>> login(String userno, String password);
 
 
     //用户列表
